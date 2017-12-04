@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Klasa Class: SchemaPiece</title>
+	<title>Klasa Class: KlasaMessage</title>
 	<link rel="shortcut icon" href="img/favicon.ico">
 
 	<!--[if lt IE 9]>
@@ -80,16 +80,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: SchemaPiece</h1>
+	<h1 class="page-title">Class: KlasaMessage</h1>
 <section>
 
 <header>
     
         <h2>
-        SchemaPiece
+        KlasaMessage
         </h2>
         
-            <div class="class-description">The SchemaPiece class that contains the data for a key and several helpers.</div>
+            <div class="class-description">Klasa's Extended Message</div>
         
     
 </header>
@@ -101,7 +101,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="SchemaPiece"><span class="type-signature"></span>new SchemaPiece(client, manager, options, parent, key)</h4>
+    <h4 class="name" id="KlasaMessage"><span class="type-signature"></span>new KlasaMessage(args)</h4>
     
     
 </dt>
@@ -128,6 +128,8 @@
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
         
 
@@ -140,13 +142,13 @@
 
         <tr>
             
-                <td class="name"><code>client</code></td>
+                <td class="name"><code>args</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="KlasaClient.html">KlasaClient</a>
+<span class="param-type">*
 </span>
 
 
@@ -155,114 +157,20 @@
             </td>
 
             
-
-            
-
-            <td class="description last">The client which initialized this instance.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>manager</code></td>
-            
-
-            <td class="type">
-            
+                <td class="attributes">
                 
-<span class="param-type"><a href="Gateway.html">Gateway</a>
-</span>
-|
 
-<span class="param-type"><a href="GatewaySQL.html">GatewaySQL</a>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The Gateway that manages this schema instance.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>options</code></td>
-            
-
-            <td class="type">
-            
                 
-<span class="param-type">AddOptions
-</span>
 
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The object containing the properties for this schema instance.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>parent</code></td>
-            
-
-            <td class="type">
-            
                 
-<span class="param-type"><a href="Schema.html">Schema</a>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The parent which holds this instance.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>key</code></td>
-            
-
-            <td class="type">
-            
+                    &lt;repeatable><br>
                 
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
+                </td>
             
 
             
 
-            <td class="description last">The name of the key.</td>
+            <td class="description last">Normal D.JS Message args</td>
         </tr>
 
     
@@ -277,13 +185,6 @@
 
 	
 
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
 	
 
 	
@@ -311,7 +212,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L28">lib/settings/SchemaPiece.js#L28</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L39">lib/extensions/KlasaMessage.js#L39</a>	</dd>
 	
 
 	
@@ -339,6 +240,16 @@
 
     
     </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="https://discord.js.org/#/docs/main/master/class/Message">external:Message</a></ul>
+
 
     
 
@@ -356,860 +267,16 @@
         <dl>
             
 <hr>
-<dt class="name" id="array">
+<dt class="name" id="args">
 
-    <h4 id="array"><span class="type-signature"></span>array<span class="type-signature"> :boolean</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Whether this key should store multiple or a single value.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L82">lib/settings/SchemaPiece.js#L82</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="client">
-
-    <h4 id="client"><span class="type-signature">&lt;readonly> </span>client<span class="type-signature"> :<a href="KlasaClient.html">KlasaClient</a></span></h4>
+    <h4 id="args"><span class="type-signature"></span>args<span class="type-signature"> :Array.&lt;string></span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        The Klasa client.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type"><a href="KlasaClient.html">KlasaClient</a>
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L29">lib/settings/SchemaPiece.js#L29</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="configurable">
-
-    <h4 id="configurable"><span class="type-signature"></span>configurable<span class="type-signature"> :boolean</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Whether this key should be configureable by the config command. When type is any, this key defaults to false.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L122">lib/settings/SchemaPiece.js#L122</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="default">
-
-    <h4 id="default"><span class="type-signature"></span>default<span class="type-signature"> :*</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        What this key should provide by default.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">*
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L90">lib/settings/SchemaPiece.js#L90</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="key">
-
-    <h4 id="key"><span class="type-signature">&lt;readonly> </span>key<span class="type-signature"> :string</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        This keys' name.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">string
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L65">lib/settings/SchemaPiece.js#L65</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="manager">
-
-    <h4 id="manager"><span class="type-signature">&lt;readonly> </span>manager<span class="type-signature"> :<a href="Gateway.html">Gateway</a>|<a href="GatewaySQL.html">GatewaySQL</a></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The Gateway that manages this SchemaPiece instance.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type"><a href="Gateway.html">Gateway</a>
-</span>
-|
-
-<span class="param-type"><a href="GatewaySQL.html">GatewaySQL</a>
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L38">lib/settings/SchemaPiece.js#L38</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="max">
-
-    <h4 id="max"><span class="type-signature">&lt;nullable> </span>max<span class="type-signature"> :number</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The maximum value for this key.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">number
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L106">lib/settings/SchemaPiece.js#L106</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="min">
-
-    <h4 id="min"><span class="type-signature">&lt;nullable> </span>min<span class="type-signature"> :number</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The minimum value for this key.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">number
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L98">lib/settings/SchemaPiece.js#L98</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="parent">
-
-    <h4 id="parent"><span class="type-signature">&lt;readonly> </span>parent<span class="type-signature"> :<a href="Schema.html">Schema</a></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The Schema instance that is parent of this instance.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type"><a href="Schema.html">Schema</a>
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L47">lib/settings/SchemaPiece.js#L47</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="path">
-
-    <h4 id="path"><span class="type-signature">&lt;readonly> </span>path<span class="type-signature"> :string</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The path of this SchemaPiece instance.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">string
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L56">lib/settings/SchemaPiece.js#L56</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="sql">
-
-    <h4 id="sql"><span class="type-signature"></span>sql<span class="type-signature"> :Array.&lt;string></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        A tuple of strings containing the path and the datatype.
+        The string arguments derived from the usageDelim of the command
     </div>
     
 
@@ -1237,7 +304,7 @@
 	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>0.5.0</li>
+			<li>0.0.1</li>
 		</ul>
 	</dd>
 	
@@ -1267,7 +334,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L114">lib/settings/SchemaPiece.js#L114</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L82">lib/extensions/KlasaMessage.js#L82</a>	</dd>
 	
 
 	
@@ -1284,16 +351,16 @@
         
             
 <hr>
-<dt class="name" id="type">
+<dt class="name" id="command">
 
-    <h4 id="type"><span class="type-signature"></span>type<span class="type-signature"> :string</span></h4>
+    <h4 id="command"><span class="type-signature">&lt;nullable> </span>command<span class="type-signature"> :<a href="Command.html">Command</a></span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        The type of this key.
+        The command being run
     </div>
     
 
@@ -1302,7 +369,91 @@
         <ul>
             <li>
                 
-<span class="param-type">string
+<span class="param-type"><a href="Command.html">Command</a>
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L61">lib/extensions/KlasaMessage.js#L61</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="guildConfigs">
+
+    <h4 id="guildConfigs"><span class="type-signature"></span>guildConfigs<span class="type-signature"> :<a href="Configuration.html">Configuration</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The guild level configs for this context (guild || default)
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="Configuration.html">Configuration</a>
 </span>
 
 
@@ -1351,7 +502,599 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L74">lib/settings/SchemaPiece.js#L74</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L47">lib/extensions/KlasaMessage.js#L47</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="language">
+
+    <h4 id="language"><span class="type-signature"></span>language<span class="type-signature"> :<a href="Language.html">Language</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The language in this setting
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="Language.html">Language</a>
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.3.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L129">lib/extensions/KlasaMessage.js#L129</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="params">
+
+    <h4 id="params"><span class="type-signature"></span>params<span class="type-signature"> :Array.&lt;any></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The parameters resolved by this class
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Array.&lt;any>
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L89">lib/extensions/KlasaMessage.js#L89</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="prefix">
+
+    <h4 id="prefix"><span class="type-signature">&lt;nullable> </span>prefix<span class="type-signature"> :RegExp</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The prefix used
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">RegExp
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L68">lib/extensions/KlasaMessage.js#L68</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="prefixLength">
+
+    <h4 id="prefixLength"><span class="type-signature">&lt;nullable> </span>prefixLength<span class="type-signature"> :number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The length of the prefix used
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L75">lib/extensions/KlasaMessage.js#L75</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="reactable">
+
+    <h4 id="reactable"><span class="type-signature">&lt;readonly> </span>reactable<span class="type-signature"> :boolean</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        If this message can be reacted to by the bot
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L157">lib/extensions/KlasaMessage.js#L157</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="reprompted">
+
+    <h4 id="reprompted"><span class="type-signature"></span>reprompted<span class="type-signature"> :boolean</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        If the command reprompted for missing args
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L96">lib/extensions/KlasaMessage.js#L96</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="responses">
+
+    <h4 id="responses"><span class="type-signature"></span>responses<span class="type-signature"> :<a href="KlasaMessage.html">KlasaMessage</a>|Array.&lt;<a href="KlasaMessage.html">KlasaMessage</a>></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The previous responses to this message
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="KlasaMessage.html">KlasaMessage</a>
+</span>
+|
+
+<span class="param-type">Array.&lt;<a href="KlasaMessage.html">KlasaMessage</a>>
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L54">lib/extensions/KlasaMessage.js#L54</a>	</dd>
 	
 
 	
@@ -1375,7 +1118,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="._parseSQLValue"><span class="type-signature">&lt;static> </span>_parseSQLValue(value)</h4>
+    <h4 class="name" id="hasAtLeastPermissionLevel"><span class="type-signature">&lt;async> </span>hasAtLeastPermissionLevel(min)</h4>
     
     
 </dt>
@@ -1383,7 +1126,7 @@
 
     
     <div class="description">
-        Parses a value to a valid string that can be used for SQL input.
+        Checks if the author of this message, has applicable permission in this message's context of at least min
     </div>
     
 
@@ -1414,799 +1157,6 @@
     </thead>
 
     <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">*
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The value to parse.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L242">lib/settings/SchemaPiece.js#L242</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="parse"><span class="type-signature"></span>parse(value, guild)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Parse a value in this key's resolver.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The value to parse.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>guild</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="KlasaGuild.html">KlasaGuild</a>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">A Guild instance required for the resolver to work.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L140">lib/settings/SchemaPiece.js#L140</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;*>
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="resolveString"><span class="type-signature"></span>resolveString(msg)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Resolve a string.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>msg</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="KlasaMessage.html">KlasaMessage</a>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The Message to use.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L183">lib/settings/SchemaPiece.js#L183</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="toJSON"><span class="type-signature"></span>toJSON()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Get this key's raw data in JSON.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L224">lib/settings/SchemaPiece.js#L224</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">SchemaPieceJSON
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="toString"><span class="type-signature"></span>toString()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Stringify a value or the instance itself.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L215">lib/settings/SchemaPiece.js#L215</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        </dl>
-    
-
-    
-        <h3 class="subsection-title">Type Definitions</h3>
-
-        <dl>
-                
-<hr>
-<dt class="name" id=".SchemaPieceJSON">
-
-    <h4 id=".SchemaPieceJSON">SchemaPieceJSON</h4>
-
-    
-</dt>
-<dd>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Object
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    <dl>
-
-<table class="props table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>type</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The type for the key.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>default</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">*
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The default value for the key.</td>
-        </tr>
-
     
 
         <tr>
@@ -2229,114 +1179,1172 @@
 
             
 
-            <td class="description last">The min value for the key (String.length for String, value for number).</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>max</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The max value for the key (String.length for String, value for number).</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>sql</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;string>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">A tuple containing the name of the column and its data type.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>array</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Whether the key should be stored as Array or not.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>configurable</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Whether the key should be configurable by the config command or not.</td>
+            <td class="description last">The minimum level required</td>
         </tr>
 
     
     </tbody>
 </table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L180">lib/extensions/KlasaMessage.js#L180</a>	</dd>
+	
+
+	
+
+	
+
+	
 </dl>
 
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;boolean>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="send"><span class="type-signature"></span>send( [content] [, options])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Sends a message that will be editable via command editing (if nothing is attached)
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>content</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">StringResolvable
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The content to send</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#MessageOptions">MessageOptions</a>
+</span>
+|
+
+<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/MessageAttachment">external:MessageAttachment</a></span>
+|
+
+<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed">external:MessageEmbed</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The D.JS message options</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L273">lib/extensions/KlasaMessage.js#L273</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;(<a href="KlasaMessage.html">KlasaMessage</a>|Array.&lt;<a href="KlasaMessage.html">KlasaMessage</a>>)>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="sendCode"><span class="type-signature"></span>sendCode(lang, content [, options])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Sends a codeblock message that will be editable via command editing (if nothing is attached)
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>lang</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The language of the codeblock</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>content</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">StringResolvable
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The content to send</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#MessageOptions">MessageOptions</a>
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The D.JS message options</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L262">lib/extensions/KlasaMessage.js#L262</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;(<a href="KlasaMessage.html">KlasaMessage</a>|Array.&lt;<a href="KlasaMessage.html">KlasaMessage</a>>)>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="sendEmbed"><span class="type-signature"></span>sendEmbed(embed [, content] [, options])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Sends an embed message that will be editable via command editing (if nothing is attached)
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>embed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed">external:MessageEmbed</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The embed to post</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>content</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">StringResolvable
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The content to send</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#MessageOptions">MessageOptions</a>
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The D.JS message options</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L244">lib/extensions/KlasaMessage.js#L244</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;(<a href="KlasaMessage.html">KlasaMessage</a>|Array.&lt;<a href="KlasaMessage.html">KlasaMessage</a>>)>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="sendMessage"><span class="type-signature"></span>sendMessage( [content] [, options])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Sends a message that will be editable via command editing (if nothing is attached)
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>content</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">StringResolvable
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The content to send</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#MessageOptions">MessageOptions</a>
+</span>
+|
+
+<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/MessageAttachment">external:MessageAttachment</a></span>
+|
+
+<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed">external:MessageEmbed</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The D.JS message options</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L192">lib/extensions/KlasaMessage.js#L192</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;(<a href="KlasaMessage.html">KlasaMessage</a>|Array.&lt;<a href="KlasaMessage.html">KlasaMessage</a>>)>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="usableCommands"><span class="type-signature">&lt;async> </span>usableCommands()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        The usable commands by the author in this message's context
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L167">lib/extensions/KlasaMessage.js#L167</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The filtered CommandStore
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;<a href="CommandStore.html">CommandStore</a>>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        <dl>
+                
+<hr>
+<dt class="name" id=".StringResolvable">
+
+    <h4 id=".StringResolvable">StringResolvable</h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Data that can be resolved to give a string. This can be:
+* A string
+* An array (joined with a new line delimiter to give a string)
+* Any value
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string
+</span>
+|
+
+<span class="param-type">Array
+</span>
+|
+
+<span class="param-type">*
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
     
 
 	
@@ -2368,7 +2376,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L8">lib/settings/SchemaPiece.js#L8</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaMessage.js#L10">lib/extensions/KlasaMessage.js#L10</a>	</dd>
 	
 
 	
