@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Klasa Class: RichDisplay</title>
+	<title>Klasa Class: SchemaPiece</title>
 	<link rel="shortcut icon" href="img/favicon.ico">
 
 	<!--[if lt IE 9]>
@@ -80,16 +80,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: RichDisplay</h1>
+	<h1 class="page-title">Class: SchemaPiece</h1>
 <section>
 
 <header>
     
         <h2>
-        RichDisplay
+        SchemaPiece
         </h2>
         
-            <div class="class-description">Klasa's RichDisplay, for helping paginated embeds with reaction buttons</div>
+            <div class="class-description">The SchemaPiece class that contains the data for a key and several helpers.</div>
         
     
 </header>
@@ -101,16 +101,12 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="RichDisplay"><span class="type-signature"></span>new RichDisplay( [embed])</h4>
+    <h4 class="name" id="SchemaPiece"><span class="type-signature"></span>new SchemaPiece(client, manager, options, parent, key)</h4>
     
     
 </dt>
 <dd>
 
-    
-    <div class="description">
-        Constructs our RichDisplay instance
-    </div>
     
 
     
@@ -132,11 +128,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
-        
 
-        
-        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -148,13 +140,14 @@
 
         <tr>
             
-                <td class="name"><code>embed</code></td>
+                <td class="name"><code>client</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed">external:MessageEmbed</a></span>
+<span class="param-type"><a href="KlasaClient.html">KlasaClient</a>
+</span>
 
 
 
@@ -162,26 +155,114 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
 
-                
+            
 
+            <td class="description last">The client which initialized this instance.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>manager</code></td>
+            
+
+            <td class="type">
+            
                 
-                </td>
+<span class="param-type"><a href="Gateway.html">Gateway</a>
+</span>
+|
+
+<span class="param-type"><a href="GatewaySQL.html">GatewaySQL</a>
+</span>
+
+
+
+            
+            </td>
+
             
 
             
-                <td class="default">
-                
-                    new MessageEmbed()
-                
-                </td>
+
+            <td class="description last">The Gateway that manages this schema instance.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
             
 
-            <td class="description last">A Template embed to apply to all pages</td>
+            <td class="type">
+            
+                
+<span class="param-type">AddOptions
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The object containing the properties for this schema instance.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>parent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Schema.html">Schema</a>
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The parent which holds this instance.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the key.</td>
         </tr>
 
     
@@ -200,7 +281,7 @@
 	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>0.4.0</li>
+			<li>0.5.0</li>
 		</ul>
 	</dd>
 	
@@ -230,7 +311,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/RichDisplay.js#L47">lib/util/RichDisplay.js#L47</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L28">lib/settings/SchemaPiece.js#L28</a>	</dd>
 	
 
 	
@@ -275,183 +356,16 @@
         <dl>
             
 <hr>
-<dt class="name" id="embedTemplate">
+<dt class="name" id="array">
 
-    <h4 id="embedTemplate"><span class="type-signature"></span>embedTemplate<span class="type-signature"> :<a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed">external:MessageEmbed</a></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The embed template
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed">external:MessageEmbed</a></span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.4.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/RichDisplay.js#L53">lib/util/RichDisplay.js#L53</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="emojis">
-
-    <h4 id="emojis"><span class="type-signature"></span>emojis<span class="type-signature"> :RichDisplayEmojisObject</span></h4>
+    <h4 id="array"><span class="type-signature"></span>array<span class="type-signature"> :boolean</span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        The default emojis to use for this display
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">RichDisplayEmojisObject
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.4.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/RichDisplay.js#L74">lib/util/RichDisplay.js#L74</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="footered">
-
-    <h4 id="footered"><span class="type-signature"></span>footered<span class="type-signature"> :boolean</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        If footers have been applied to all pages
+        Whether this key should store multiple or a single value.
     </div>
     
 
@@ -479,7 +393,7 @@
 	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>0.4.0</li>
+			<li>0.5.0</li>
 		</ul>
 	</dd>
 	
@@ -509,7 +423,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/RichDisplay.js#L89">lib/util/RichDisplay.js#L89</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L82">lib/settings/SchemaPiece.js#L82</a>	</dd>
 	
 
 	
@@ -526,16 +440,16 @@
         
             
 <hr>
-<dt class="name" id="infoPage">
+<dt class="name" id="client">
 
-    <h4 id="infoPage"><span class="type-signature">&lt;nullable> </span>infoPage<span class="type-signature"> :<a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed">external:MessageEmbed</a></span></h4>
+    <h4 id="client"><span class="type-signature">&lt;readonly> </span>client<span class="type-signature"> :<a href="KlasaClient.html">KlasaClient</a></span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        An optional Info page/embed
+        The Klasa client.
     </div>
     
 
@@ -544,7 +458,8 @@
         <ul>
             <li>
                 
-<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed">external:MessageEmbed</a></span>
+<span class="param-type"><a href="KlasaClient.html">KlasaClient</a>
+</span>
 
 
 
@@ -562,7 +477,7 @@
 	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>0.4.0</li>
+			<li>0.5.0</li>
 		</ul>
 	</dd>
 	
@@ -592,7 +507,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/RichDisplay.js#L67">lib/util/RichDisplay.js#L67</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L29">lib/settings/SchemaPiece.js#L29</a>	</dd>
 	
 
 	
@@ -609,16 +524,16 @@
         
             
 <hr>
-<dt class="name" id="pages">
+<dt class="name" id="configurable">
 
-    <h4 id="pages"><span class="type-signature"></span>pages<span class="type-signature"> :<a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed">external:MessageEmbed</a></span></h4>
+    <h4 id="configurable"><span class="type-signature"></span>configurable<span class="type-signature"> :boolean</span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        The stored pages of the display
+        Whether this key should be configureable by the config command. When type is any, this key defaults to false.
     </div>
     
 
@@ -627,7 +542,8 @@
         <ul>
             <li>
                 
-<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed">Array.<external:MessageEmbed></a></span>
+<span class="param-type">boolean
+</span>
 
 
 
@@ -645,7 +561,7 @@
 	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>0.4.0</li>
+			<li>0.5.0</li>
 		</ul>
 	</dd>
 	
@@ -675,7 +591,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/RichDisplay.js#L60">lib/util/RichDisplay.js#L60</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L122">lib/settings/SchemaPiece.js#L122</a>	</dd>
 	
 
 	
@@ -692,16 +608,16 @@
         
             
 <hr>
-<dt class="name" id="template">
+<dt class="name" id="default">
 
-    <h4 id="template"><span class="type-signature">&lt;readonly> </span>template<span class="type-signature"> :<a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed">external:MessageEmbed</a></span></h4>
+    <h4 id="default"><span class="type-signature"></span>default<span class="type-signature"> :*</span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        A new instance of the template embed
+        What this key should provide by default.
     </div>
     
 
@@ -710,7 +626,8 @@
         <ul>
             <li>
                 
-<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed">external:MessageEmbed</a></span>
+<span class="param-type">*
+</span>
 
 
 
@@ -728,7 +645,7 @@
 	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>0.4.0</li>
+			<li>0.5.0</li>
 		</ul>
 	</dd>
 	
@@ -758,7 +675,683 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/RichDisplay.js#L98">lib/util/RichDisplay.js#L98</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L90">lib/settings/SchemaPiece.js#L90</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="key">
+
+    <h4 id="key"><span class="type-signature">&lt;readonly> </span>key<span class="type-signature"> :string</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        This keys' name.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L65">lib/settings/SchemaPiece.js#L65</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="manager">
+
+    <h4 id="manager"><span class="type-signature">&lt;readonly> </span>manager<span class="type-signature"> :<a href="Gateway.html">Gateway</a>|<a href="GatewaySQL.html">GatewaySQL</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The Gateway that manages this SchemaPiece instance.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="Gateway.html">Gateway</a>
+</span>
+|
+
+<span class="param-type"><a href="GatewaySQL.html">GatewaySQL</a>
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L38">lib/settings/SchemaPiece.js#L38</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="max">
+
+    <h4 id="max"><span class="type-signature">&lt;nullable> </span>max<span class="type-signature"> :number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The maximum value for this key.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L106">lib/settings/SchemaPiece.js#L106</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="min">
+
+    <h4 id="min"><span class="type-signature">&lt;nullable> </span>min<span class="type-signature"> :number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The minimum value for this key.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L98">lib/settings/SchemaPiece.js#L98</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="parent">
+
+    <h4 id="parent"><span class="type-signature">&lt;readonly> </span>parent<span class="type-signature"> :<a href="Schema.html">Schema</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The Schema instance that is parent of this instance.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="Schema.html">Schema</a>
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L47">lib/settings/SchemaPiece.js#L47</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="path">
+
+    <h4 id="path"><span class="type-signature">&lt;readonly> </span>path<span class="type-signature"> :string</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The path of this SchemaPiece instance.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L56">lib/settings/SchemaPiece.js#L56</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="sql">
+
+    <h4 id="sql"><span class="type-signature"></span>sql<span class="type-signature"> :Array.&lt;string></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        A tuple of strings containing the path and the datatype.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Array.&lt;string>
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L114">lib/settings/SchemaPiece.js#L114</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="type">
+
+    <h4 id="type"><span class="type-signature"></span>type<span class="type-signature"> :string</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The type of this key.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L74">lib/settings/SchemaPiece.js#L74</a>	</dd>
 	
 
 	
@@ -782,7 +1375,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="addPage"><span class="type-signature"></span>addPage(embed)</h4>
+    <h4 class="name" id="._parseSQLValue"><span class="type-signature">&lt;static> </span>_parseSQLValue(value)</h4>
     
     
 </dt>
@@ -790,7 +1383,7 @@
 
     
     <div class="description">
-        Adds a page to the RichDisplay
+        Parses a value to a valid string that can be used for SQL input.
     </div>
     
 
@@ -825,17 +1418,14 @@
 
         <tr>
             
-                <td class="name"><code>embed</code></td>
+                <td class="name"><code>value</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">function
+<span class="param-type">*
 </span>
-|
-
-<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed">external:MessageEmbed</a></span>
 
 
 
@@ -846,7 +1436,7 @@
 
             
 
-            <td class="description last">A callback with the embed template passed and the embed returned, or an embed.</td>
+            <td class="description last">The value to parse.</td>
         </tr>
 
     
@@ -865,7 +1455,7 @@
 	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>0.4.0</li>
+			<li>0.5.0</li>
 		</ul>
 	</dd>
 	
@@ -895,7 +1485,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/RichDisplay.js#L119">lib/util/RichDisplay.js#L119</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L242">lib/settings/SchemaPiece.js#L242</a>	</dd>
 	
 
 	
@@ -920,10 +1510,6 @@
     <h5>Returns:</h5>
     
             
-<div class="param-desc">
-    this RichDisplay
-</div>
-
 
 
 <dl>
@@ -932,7 +1518,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="RichDisplay.html">RichDisplay</a>
+<span class="param-type">string
 </span>
 
 
@@ -950,7 +1536,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="run"><span class="type-signature">&lt;async> </span>run(msg [, options])</h4>
+    <h4 class="name" id="parse"><span class="type-signature"></span>parse(value, guild)</h4>
     
     
 </dt>
@@ -958,7 +1544,7 @@
 
     
     <div class="description">
-        Runs the RichDisplay
+        Parse a value in this key's resolver.
     </div>
     
 
@@ -981,11 +1567,193 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
-        
 
         
-        <th>Default</th>
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value to parse.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>guild</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="KlasaGuild.html">KlasaGuild</a>
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A Guild instance required for the resolver to work.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L140">lib/settings/SchemaPiece.js#L140</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;*>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="resolveString"><span class="type-signature"></span>resolveString(msg)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Resolve a string.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
         
 
         <th class="last">Description</th>
@@ -1012,63 +1780,10 @@
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">A message to either edit, or use to send a new message for this RichDisplay</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>options</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">RichDisplayRunOptions
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    {}
-                
-                </td>
-            
-
-            <td class="description last">The options to use while running this RichDisplay</td>
+            <td class="description last">The Message to use.</td>
         </tr>
 
     
@@ -1087,7 +1802,7 @@
 	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>0.4.0</li>
+			<li>0.5.0</li>
 		</ul>
 	</dd>
 	
@@ -1117,7 +1832,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/RichDisplay.js#L142">lib/util/RichDisplay.js#L142</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L183">lib/settings/SchemaPiece.js#L183</a>	</dd>
 	
 
 	
@@ -1150,7 +1865,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="ReactionHandler.html">ReactionHandler</a>
+<span class="param-type">string
 </span>
 
 
@@ -1168,7 +1883,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="setEmojis"><span class="type-signature"></span>setEmojis(emojis)</h4>
+    <h4 class="name" id="toJSON"><span class="type-signature"></span>toJSON()</h4>
     
     
 </dt>
@@ -1176,7 +1891,7 @@
 
     
     <div class="description">
-        Sets emojis to a new set of emojis
+        Get this key's raw data in JSON.
     </div>
     
 
@@ -1185,57 +1900,6 @@
     
 
     
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>emojis</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">RichDisplayEmojisObject
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">An object containing replacement emojis to use instead.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
     
 
     
@@ -1248,7 +1912,7 @@
 	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>0.4.0</li>
+			<li>0.5.0</li>
 		</ul>
 	</dd>
 	
@@ -1278,7 +1942,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/RichDisplay.js#L108">lib/util/RichDisplay.js#L108</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L224">lib/settings/SchemaPiece.js#L224</a>	</dd>
 	
 
 	
@@ -1303,10 +1967,6 @@
     <h5>Returns:</h5>
     
             
-<div class="param-desc">
-    this RichDisplay
-</div>
-
 
 
 <dl>
@@ -1315,7 +1975,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="RichDisplay.html">RichDisplay</a>
+<span class="param-type">SchemaPieceJSON
 </span>
 
 
@@ -1333,7 +1993,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="setInfoPage"><span class="type-signature"></span>setInfoPage(embed)</h4>
+    <h4 class="name" id="toString"><span class="type-signature"></span>toString()</h4>
     
     
 </dt>
@@ -1341,7 +2001,7 @@
 
     
     <div class="description">
-        Adds an info page to the RichDisplay
+        Stringify a value or the instance itself.
     </div>
     
 
@@ -1350,60 +2010,6 @@
     
 
     
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>embed</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function
-</span>
-|
-
-<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed">external:MessageEmbed</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">A callback with the embed template passed and the embed returned, or an embed.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
     
 
     
@@ -1416,7 +2022,7 @@
 	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>0.4.0</li>
+			<li>0.5.0</li>
 		</ul>
 	</dd>
 	
@@ -1446,7 +2052,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/RichDisplay.js#L130">lib/util/RichDisplay.js#L130</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L215">lib/settings/SchemaPiece.js#L215</a>	</dd>
 	
 
 	
@@ -1471,10 +2077,6 @@
     <h5>Returns:</h5>
     
             
-<div class="param-desc">
-    this RichDisplay
-</div>
-
 
 
 <dl>
@@ -1483,7 +2085,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="RichDisplay.html">RichDisplay</a>
+<span class="param-type">string
 </span>
 
 
@@ -1506,86 +2108,9 @@
         <dl>
                 
 <hr>
-<dt class="name" id=".emoji">
+<dt class="name" id=".SchemaPieceJSON">
 
-    <h4 id=".emoji">emoji</h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        A single unicode character
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">string
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/RichDisplay.js#L9">lib/util/RichDisplay.js#L9</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-            
-                
-<hr>
-<dt class="name" id=".RichDisplayEmojisObject">
-
-    <h4 id=".RichDisplayEmojisObject">RichDisplayEmojisObject</h4>
+    <h4 id=".SchemaPieceJSON">SchemaPieceJSON</h4>
 
     
 </dt>
@@ -1597,7 +2122,7 @@
         <ul>
             <li>
                 
-<span class="param-type">object
+<span class="param-type">Object
 </span>
 
 
@@ -1636,442 +2161,7 @@
 
         <tr>
             
-                <td class="name"><code>first</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">emoji
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>back</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">emoji
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>forward</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">emoji
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>last</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">emoji
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>jump</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">emoji
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>info</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">emoji
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>stop</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">emoji
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</dl>
-
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/RichDisplay.js#L15">lib/util/RichDisplay.js#L15</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-            
-                
-<hr>
-<dt class="name" id=".RichDisplayRunOptions">
-
-    <h4 id=".RichDisplayRunOptions">RichDisplayRunOptions</h4>
-
-    
-</dt>
-<dd>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">object
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    <dl>
-
-<table class="props table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>filter</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">A filter function to add to the ReactionHandler (Recieves: Reaction, User)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>stop</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    true
-                
-                </td>
-            
-
-            <td class="description last">If a stop reaction should be included</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>jump</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    true
-                
-                </td>
-            
-
-            <td class="description last">If a jump reaction should be included</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>firstLast</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    true
-                
-                </td>
-            
-
-            <td class="description last">If a first and last reaction should be included</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>prompt</code></td>
+                <td class="name"><code>type</code></td>
             
 
             <td class="type">
@@ -2086,31 +2176,42 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
 
             
-                <td class="default">
-                
-                    'Which page would you like to jump to?'
-                
-                </td>
-            
 
-            <td class="description last">The prompt to be used when awaiting user input on a page to jump to</td>
+            <td class="description last">The type for the key.</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>startPage</code></td>
+                <td class="name"><code>default</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The default value for the key.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>min</code></td>
             
 
             <td class="type">
@@ -2125,24 +2226,10 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
 
             
-                <td class="default">
-                
-                    0
-                
-                </td>
-            
 
-            <td class="description last">The page to start the RichDisplay on</td>
+            <td class="description last">The min value for the key (String.length for String, value for number).</td>
         </tr>
 
     
@@ -2164,35 +2251,23 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">The maximum total amount of reactions to collect</td>
+            <td class="description last">The max value for the key (String.length for String, value for number).</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>maxEmojis</code></td>
+                <td class="name"><code>sql</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type">Array.&lt;string>
 </span>
 
 
@@ -2201,35 +2276,23 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">The maximum number of emojis to collect</td>
+            <td class="description last">A tuple containing the name of the column and its data type.</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>maxUsers</code></td>
+                <td class="name"><code>array</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type">boolean
 </span>
 
 
@@ -2238,35 +2301,23 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">The maximum number of users to react</td>
+            <td class="description last">Whether the key should be stored as Array or not.</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>time</code></td>
+                <td class="name"><code>configurable</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type">boolean
 </span>
 
 
@@ -2275,22 +2326,10 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">The maximum amount of time before this RichDisplay should expire</td>
+            <td class="description last">Whether the key should be configurable by the config command or not.</td>
         </tr>
 
     
@@ -2329,7 +2368,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/RichDisplay.js#L27">lib/util/RichDisplay.js#L27</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L8">lib/settings/SchemaPiece.js#L8</a>	</dd>
 	
 
 	
