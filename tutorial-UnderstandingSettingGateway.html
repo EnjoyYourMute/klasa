@@ -126,7 +126,7 @@ client.login('A_BEAUTIFUL_TOKEN_AINT_IT?');
 <p>Now that I have a new key called <code>modlogs</code>, I want to configure it outside the <code>conf</code> command, how can we do this?</p>
 <pre class="prettyprint source lang-javascript"><code>msg.guild.configs.updateOne('modlogs', '267727088465739778', msg.guild);
 </code></pre>
-<p>Check: <code>Gateway.updateOne</code></p>
+<p>Check: <code>Configuration.updateOne</code></p>
 <blockquote>
 <p>You can use a Channel instance, <a href="SettingResolver.html"><code>SettingResolver</code></a> will make sure the input is valid and the database gets an <strong>ID</strong> and not an object.</p>
 </blockquote>
