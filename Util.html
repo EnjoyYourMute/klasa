@@ -937,7 +937,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L166">lib/util/util.js#L166</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L177">lib/util/util.js#L177</a>	</dd>
 	
 
 	
@@ -988,12 +988,16 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".isFunction"><span class="type-signature">&lt;static> </span>isFunction(func)</h4>
+    <h4 class="name" id=".isFunction"><span class="type-signature">&lt;static> </span>isFunction(input)</h4>
     
     
 </dt>
 <dd>
 
+    
+    <div class="description">
+        Verify if the input is a function.
+    </div>
     
 
     
@@ -1027,7 +1031,7 @@
 
         <tr>
             
-                <td class="name"><code>func</code></td>
+                <td class="name"><code>input</code></td>
             
 
             <td class="type">
@@ -1094,7 +1098,329 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L114">lib/util/util.js#L114</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L115">lib/util/util.js#L115</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".isNumber"><span class="type-signature">&lt;static> </span>isNumber(input)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Verify if a number is a finite number.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The number to verify.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L135">lib/util/util.js#L135</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".isObject"><span class="type-signature">&lt;static> </span>isObject(input)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Verify if the input is an object literal (or class).
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The object to verify.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L125">lib/util/util.js#L125</a>	</dd>
 	
 
 	
@@ -1647,7 +1973,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L176">lib/util/util.js#L176</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L187">lib/util/util.js#L187</a>	</dd>
 	
 
 	
@@ -1973,7 +2299,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L134">lib/util/util.js#L134</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L145">lib/util/util.js#L145</a>	</dd>
 	
 
 	
