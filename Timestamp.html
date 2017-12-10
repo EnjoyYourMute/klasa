@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Klasa Class: KlasaGuild</title>
+	<title>Klasa Class: Timestamp</title>
 	<link rel="shortcut icon" href="img/favicon.ico">
 
 	<!--[if lt IE 9]>
@@ -80,16 +80,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: KlasaGuild</h1>
+	<h1 class="page-title">Class: Timestamp</h1>
 <section>
 
 <header>
     
         <h2>
-        KlasaGuild
+        Timestamp
         </h2>
         
-            <div class="class-description">Klasa's Extended Guild</div>
+            <div class="class-description">Klasa's Timestamp class, parses the pattern once, displays the desired Date or UNIX timestamp with the selected pattern.</div>
         
     
 </header>
@@ -101,12 +101,16 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="KlasaGuild"><span class="type-signature"></span>new KlasaGuild(args)</h4>
+    <h4 class="name" id="Timestamp"><span class="type-signature"></span>new Timestamp(pattern)</h4>
     
     
 </dt>
 <dd>
 
+    
+    <div class="description">
+        Starts a new Timestamp and parses the pattern.
+    </div>
     
 
     
@@ -128,8 +132,6 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
-        
 
         
 
@@ -142,13 +144,13 @@
 
         <tr>
             
-                <td class="name"><code>args</code></td>
+                <td class="name"><code>pattern</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">*
+<span class="param-type">string
 </span>
 
 
@@ -157,20 +159,10 @@
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
 
             
 
-            <td class="description last">Normal D.JS Guild args</td>
+            <td class="description last">The pattern to parse.</td>
         </tr>
 
     
@@ -185,6 +177,13 @@
 
 	
 
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
 	
 
 	
@@ -212,7 +211,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaGuild.js#L13">lib/extensions/KlasaGuild.js#L13</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/Timestamp.js#L44">lib/util/Timestamp.js#L44</a>	</dd>
 	
 
 	
@@ -242,16 +241,6 @@
     </div>
 
     
-        <h3 class="subsection-title">Extends</h3>
-
-        
-
-
-    <ul>
-        <li><a href="https://discord.js.org/#/docs/main/master/class/Guild">external:Guild</a></ul>
-
-
-    
 
     
 
@@ -267,17 +256,13 @@
         <dl>
             
 <hr>
-<dt class="name" id="configs">
+<dt class="name" id="pattern">
 
-    <h4 id="configs"><span class="type-signature"></span>configs<span class="type-signature"> :<a href="Configuration.html">Configuration</a></span></h4>
+    <h4 id="pattern"><span class="type-signature"></span>pattern<span class="type-signature"> :string</span></h4>
 
     
 </dt>
 <dd>
-    
-    <div class="description">
-        The guild level configs for this context (guild || default)
-    </div>
     
 
     
@@ -285,7 +270,7 @@
         <ul>
             <li>
                 
-<span class="param-type"><a href="Configuration.html">Configuration</a>
+<span class="param-type">string
 </span>
 
 
@@ -334,7 +319,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaGuild.js#L21">lib/extensions/KlasaGuild.js#L21</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/Timestamp.js#L49">lib/util/Timestamp.js#L49</a>	</dd>
 	
 
 	
@@ -348,21 +333,136 @@
     
 </dd>
 
-        
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
             
 <hr>
-<dt class="name" id="language">
-
-    <h4 id="language"><span class="type-signature"></span>language<span class="type-signature"></span></h4>
-
+<dt>
+    <h4 class="name" id=".toNow"><span class="type-signature">&lt;static> </span>toNow(earlier [, showIn])</h4>
+    
     
 </dt>
 <dd>
+
     
     <div class="description">
-        The language configured for this guild
+        Shows the userfriendly duration of time between a period and now.
     </div>
     
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>earlier</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date
+</span>
+|
+
+<span class="param-type">number
+</span>
+|
+
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The time to compare.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>showIn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Whether the output should be prefixed.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
     
 
@@ -372,6 +472,13 @@
 
 	
 
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
 	
 
 	
@@ -399,7 +506,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/extensions/KlasaGuild.js#L28">lib/extensions/KlasaGuild.js#L28</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/Timestamp.js#L181">lib/util/Timestamp.js#L181</a>	</dd>
 	
 
 	
@@ -411,11 +518,372 @@
 
 
     
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="display"><span class="type-signature"></span>display(time)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Display the current date with the current pattern.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>time</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date
+</span>
+|
+
+<span class="param-type">number
+</span>
+|
+
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The time to display.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/Timestamp.js#L65">lib/util/Timestamp.js#L65</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="edit"><span class="type-signature"></span>edit(pattern)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Edits the current pattern.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pattern</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The new pattern for this instance.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/Timestamp.js#L80">lib/util/Timestamp.js#L80</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Timestamp.html">Timestamp</a>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
 </dd>
 
         </dl>
-    
-
     
 
     
