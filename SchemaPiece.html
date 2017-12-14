@@ -34,7 +34,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="ArgResolver.html">ArgResolver</a></li><li><a href="Command.html">Command</a></li><li><a href="CommandStore.html">CommandStore</a></li><li><a href="Configuration.html">Configuration</a></li><li><a href="Event.html">Event</a></li><li><a href="EventStore.html">EventStore</a></li><li><a href="Extendable.html">Extendable</a></li><li><a href="ExtendableStore.html">ExtendableStore</a></li><li><a href="Finalizer.html">Finalizer</a></li><li><a href="FinalizerStore.html">FinalizerStore</a></li><li><a href="Gateway.html">Gateway</a></li><li><a href="GatewayDriver.html">GatewayDriver</a></li><li><a href="GatewayStorage.html">GatewayStorage</a></li><li><a href="Inhibitor.html">Inhibitor</a></li><li><a href="InhibitorStore.html">InhibitorStore</a></li><li><a href="KlasaClient.html">KlasaClient</a></li><li><a href="KlasaConsole.html">KlasaConsole</a></li><li><a href="KlasaGuild.html">KlasaGuild</a></li><li><a href="KlasaMessage.html">KlasaMessage</a></li><li><a href="KlasaUser.html">KlasaUser</a></li><li><a href="Language.html">Language</a></li><li><a href="LanguageStore.html">LanguageStore</a></li><li><a href="Monitor.html">Monitor</a></li><li><a href="MonitorStore.html">MonitorStore</a></li><li><a href="ParsedUsage.html">ParsedUsage</a></li><li><a href="PermissionLevels.html">PermissionLevels</a></li><li><a href="Piece.html">Piece</a></li><li><a href="Possible.html">Possible</a></li><li><a href="Provider.html">Provider</a></li><li><a href="ProviderStore.html">ProviderStore</a></li><li><a href="ReactionHandler.html">ReactionHandler</a></li><li><a href="Resolver.html">Resolver</a></li><li><a href="RichDisplay.html">RichDisplay</a></li><li><a href="RichMenu.html">RichMenu</a></li><li><a href="Schema.html">Schema</a></li><li><a href="SchemaPiece.html">SchemaPiece</a></li><li><a href="SettingResolver.html">SettingResolver</a></li><li><a href="Stopwatch.html">Stopwatch</a></li><li><a href="Store.html">Store</a></li><li><a href="Tag.html">Tag</a></li><li><a href="Timestamp.html">Timestamp</a></li><li><a href="Util.html">Util</a></li>
+					<li><a href="ArgResolver.html">ArgResolver</a></li><li><a href="Command.html">Command</a></li><li><a href="CommandStore.html">CommandStore</a></li><li><a href="Configuration.html">Configuration</a></li><li><a href="Event.html">Event</a></li><li><a href="EventStore.html">EventStore</a></li><li><a href="Extendable.html">Extendable</a></li><li><a href="ExtendableStore.html">ExtendableStore</a></li><li><a href="Finalizer.html">Finalizer</a></li><li><a href="FinalizerStore.html">FinalizerStore</a></li><li><a href="Gateway.html">Gateway</a></li><li><a href="GatewayDriver.html">GatewayDriver</a></li><li><a href="GatewayStorage.html">GatewayStorage</a></li><li><a href="Inhibitor.html">Inhibitor</a></li><li><a href="InhibitorStore.html">InhibitorStore</a></li><li><a href="KlasaClient.html">KlasaClient</a></li><li><a href="KlasaConsole.html">KlasaConsole</a></li><li><a href="KlasaGuild.html">KlasaGuild</a></li><li><a href="KlasaMessage.html">KlasaMessage</a></li><li><a href="KlasaUser.html">KlasaUser</a></li><li><a href="Language.html">Language</a></li><li><a href="LanguageStore.html">LanguageStore</a></li><li><a href="Monitor.html">Monitor</a></li><li><a href="MonitorStore.html">MonitorStore</a></li><li><a href="ParsedUsage.html">ParsedUsage</a></li><li><a href="PermissionLevels.html">PermissionLevels</a></li><li><a href="Piece.html">Piece</a></li><li><a href="Possible.html">Possible</a></li><li><a href="Provider.html">Provider</a></li><li><a href="ProviderStore.html">ProviderStore</a></li><li><a href="ReactionHandler.html">ReactionHandler</a></li><li><a href="Resolver.html">Resolver</a></li><li><a href="RichDisplay.html">RichDisplay</a></li><li><a href="RichMenu.html">RichMenu</a></li><li><a href="Schema.html">Schema</a></li><li><a href="SchemaFolder.html">SchemaFolder</a></li><li><a href="SchemaPiece.html">SchemaPiece</a></li><li><a href="SettingResolver.html">SettingResolver</a></li><li><a href="Stopwatch.html">Stopwatch</a></li><li><a href="Store.html">Store</a></li><li><a href="Tag.html">Tag</a></li><li><a href="Timestamp.html">Timestamp</a></li><li><a href="Util.html">Util</a></li>
 				</ul>
 			</li>
 			
@@ -94,7 +94,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="SchemaPiece"><span class="type-signature"></span>new SchemaPiece(client, manager, options, parent, key)</h4>
+    <h4 class="name" id="SchemaPiece"><span class="type-signature"></span>new SchemaPiece(client, gateway, options, parent, key)</h4>
     
     
 </dt>
@@ -151,14 +151,14 @@
 
             
 
-            <td class="description last">The client which initialized this instance.</td>
+            <td class="description last">The client which initialized this instance</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>manager</code></td>
+                <td class="name"><code>gateway</code></td>
             
 
             <td class="type">
@@ -176,7 +176,7 @@
 
             
 
-            <td class="description last">The Gateway that manages this schema instance.</td>
+            <td class="description last">The Gateway that manages this schema instance</td>
         </tr>
 
     
@@ -201,7 +201,7 @@
 
             
 
-            <td class="description last">The object containing the properties for this schema instance.</td>
+            <td class="description last">The object containing the properties for this schema instance</td>
         </tr>
 
     
@@ -214,7 +214,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="Schema.html">Schema</a>
+<span class="param-type"><a href="SchemaFolder.html">SchemaFolder</a>
 </span>
 
 
@@ -226,7 +226,7 @@
 
             
 
-            <td class="description last">The parent which holds this instance.</td>
+            <td class="description last">The parent which holds this instance</td>
         </tr>
 
     
@@ -251,7 +251,7 @@
 
             
 
-            <td class="description last">The name of the key.</td>
+            <td class="description last">The name of the key</td>
         </tr>
 
     
@@ -300,7 +300,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L39">lib/settings/SchemaPiece.js#L39</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L40">lib/settings/SchemaPiece.js#L40</a>	</dd>
 	
 
 	
@@ -412,91 +412,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L93">lib/settings/SchemaPiece.js#L93</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="client">
-
-    <h4 id="client"><span class="type-signature">&lt;readonly> </span>client<span class="type-signature"> :<a href="KlasaClient.html">KlasaClient</a></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The Klasa client.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type"><a href="KlasaClient.html">KlasaClient</a>
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L40">lib/settings/SchemaPiece.js#L40</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L51">lib/settings/SchemaPiece.js#L51</a>	</dd>
 	
 
 	
@@ -580,7 +496,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L133">lib/settings/SchemaPiece.js#L133</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L91">lib/settings/SchemaPiece.js#L91</a>	</dd>
 	
 
 	
@@ -664,175 +580,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L101">lib/settings/SchemaPiece.js#L101</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="key">
-
-    <h4 id="key"><span class="type-signature">&lt;readonly> </span>key<span class="type-signature"> :string</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        This keys' name.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">string
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L76">lib/settings/SchemaPiece.js#L76</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="manager">
-
-    <h4 id="manager"><span class="type-signature">&lt;readonly> </span>manager<span class="type-signature"> :<a href="Gateway.html">Gateway</a></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The Gateway that manages this SchemaPiece instance.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type"><a href="Gateway.html">Gateway</a>
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L49">lib/settings/SchemaPiece.js#L49</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L59">lib/settings/SchemaPiece.js#L59</a>	</dd>
 	
 
 	
@@ -916,7 +664,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L117">lib/settings/SchemaPiece.js#L117</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L75">lib/settings/SchemaPiece.js#L75</a>	</dd>
 	
 
 	
@@ -952,174 +700,6 @@
             <li>
                 
 <span class="param-type">number
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L109">lib/settings/SchemaPiece.js#L109</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="parent">
-
-    <h4 id="parent"><span class="type-signature">&lt;readonly> </span>parent<span class="type-signature"> :<a href="Schema.html">Schema</a></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The Schema instance that is parent of this instance.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type"><a href="Schema.html">Schema</a>
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L58">lib/settings/SchemaPiece.js#L58</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="path">
-
-    <h4 id="path"><span class="type-signature">&lt;readonly> </span>path<span class="type-signature"> :string</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The path of this SchemaPiece instance.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">string
 </span>
 
 
@@ -1252,7 +832,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L125">lib/settings/SchemaPiece.js#L125</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L83">lib/settings/SchemaPiece.js#L83</a>	</dd>
 	
 
 	
@@ -1336,7 +916,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L85">lib/settings/SchemaPiece.js#L85</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L43">lib/settings/SchemaPiece.js#L43</a>	</dd>
 	
 
 	
@@ -1357,167 +937,6 @@
         <h3 class="subsection-title">Methods</h3>
 
         <dl>
-            
-<hr>
-<dt>
-    <h4 class="name" id="._parseSQLValue"><span class="type-signature">&lt;static> </span>_parseSQLValue(value)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Parses a value to a valid string that can be used for SQL input.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">*
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The value to parse.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L383">lib/settings/SchemaPiece.js#L383</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
             
 <hr>
 <dt>
@@ -1582,7 +1001,7 @@
 
             
 
-            <td class="description last">The new options.</td>
+            <td class="description last">The new options</td>
         </tr>
 
     
@@ -1631,7 +1050,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L202">lib/settings/SchemaPiece.js#L202</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L152">lib/settings/SchemaPiece.js#L152</a>	</dd>
 	
 
 	
@@ -1743,7 +1162,7 @@
 
             
 
-            <td class="description last">The value to parse.</td>
+            <td class="description last">The value to parse</td>
         </tr>
 
     
@@ -1768,7 +1187,7 @@
 
             
 
-            <td class="description last">A Guild instance required for the resolver to work.</td>
+            <td class="description last">A Guild instance required for the resolver to work</td>
         </tr>
 
     
@@ -1817,7 +1236,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L159">lib/settings/SchemaPiece.js#L159</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L109">lib/settings/SchemaPiece.js#L109</a>	</dd>
 	
 
 	
@@ -1929,7 +1348,7 @@
 
             
 
-            <td class="description last">The Message to use.</td>
+            <td class="description last">The Message to use</td>
         </tr>
 
     
@@ -1978,7 +1397,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L169">lib/settings/SchemaPiece.js#L169</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L119">lib/settings/SchemaPiece.js#L119</a>	</dd>
 	
 
 	
@@ -2088,7 +1507,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L365">lib/settings/SchemaPiece.js#L365</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L312">lib/settings/SchemaPiece.js#L312</a>	</dd>
 	
 
 	
@@ -2198,7 +1617,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L356">lib/settings/SchemaPiece.js#L356</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L329">lib/settings/SchemaPiece.js#L329</a>	</dd>
 	
 
 	
@@ -2335,7 +1754,7 @@
 
             
 
-            <td class="description last">The new default value.</td>
+            <td class="description last">The new default value</td>
         </tr>
 
     
@@ -2368,7 +1787,7 @@
 
             
 
-            <td class="description last">The new minimum range value.</td>
+            <td class="description last">The new minimum range value</td>
         </tr>
 
     
@@ -2401,7 +1820,7 @@
 
             
 
-            <td class="description last">The new maximum range value.</td>
+            <td class="description last">The new maximum range value</td>
         </tr>
 
     
@@ -2434,7 +1853,7 @@
 
             
 
-            <td class="description last">The new configurable value.</td>
+            <td class="description last">The new configurable value</td>
         </tr>
 
     
@@ -2467,7 +1886,7 @@
 
             
 
-            <td class="description last">The new sql datatype.</td>
+            <td class="description last">The new sql datatype</td>
         </tr>
 
     
@@ -2506,7 +1925,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L21">lib/settings/SchemaPiece.js#L21</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L22">lib/settings/SchemaPiece.js#L22</a>	</dd>
 	
 
 	
@@ -2594,7 +2013,7 @@
 
             
 
-            <td class="description last">The type for the key.</td>
+            <td class="description last">The type for the key</td>
         </tr>
 
     
@@ -2619,7 +2038,7 @@
 
             
 
-            <td class="description last">The default value for the key.</td>
+            <td class="description last">The default value for the key</td>
         </tr>
 
     
@@ -2644,7 +2063,7 @@
 
             
 
-            <td class="description last">The min value for the key (String.length for String, value for number).</td>
+            <td class="description last">The min value for the key (String.length for String, value for number)</td>
         </tr>
 
     
@@ -2669,7 +2088,7 @@
 
             
 
-            <td class="description last">The max value for the key (String.length for String, value for number).</td>
+            <td class="description last">The max value for the key (String.length for String, value for number)</td>
         </tr>
 
     
@@ -2694,7 +2113,7 @@
 
             
 
-            <td class="description last">A tuple containing the name of the column and its data type.</td>
+            <td class="description last">A tuple containing the name of the column and its data type</td>
         </tr>
 
     
@@ -2719,7 +2138,7 @@
 
             
 
-            <td class="description last">Whether the key should be stored as Array or not.</td>
+            <td class="description last">Whether the key should be stored as Array or not</td>
         </tr>
 
     
@@ -2744,7 +2163,7 @@
 
             
 
-            <td class="description last">Whether the key should be configurable by the config command or not.</td>
+            <td class="description last">Whether the key should be configurable by the config command or not</td>
         </tr>
 
     
@@ -2783,7 +2202,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L9">lib/settings/SchemaPiece.js#L9</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L10">lib/settings/SchemaPiece.js#L10</a>	</dd>
 	
 
 	

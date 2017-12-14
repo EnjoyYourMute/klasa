@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Klasa Class: Util</title>
+	<title>Klasa Class: SchemaFolder</title>
 	<link rel="shortcut icon" href="img/favicon.ico">
 
 	<!--[if lt IE 9]>
@@ -73,16 +73,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: Util</h1>
+	<h1 class="page-title">Class: SchemaFolder</h1>
 <section>
 
 <header>
     
         <h2>
-        Util
+        SchemaFolder
         </h2>
         
-            <div class="class-description">Contains static methods to be used throughout klasa</div>
+            <div class="class-description">The schema class that stores (nested) folders and keys for SettingGateway usage. This class also implements multiple helpers.</div>
         
     
 </header>
@@ -94,23 +94,214 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="Util"><span class="type-signature"></span>new Util()</h4>
+    <h4 class="name" id="SchemaFolder"><span class="type-signature"></span>new SchemaFolder(client, gateway, options, parent, key)</h4>
     
     
 </dt>
 <dd>
 
     
-    <div class="description">
-        This class may not be initiated with new
-    </div>
-    
 
     
 
     
 
     
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>client</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="KlasaClient.html">KlasaClient</a>
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The client which initialized this instance</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>gateway</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Gateway.html">Gateway</a>
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The Gateway that manages this schema instance</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The object containing the properties for this schema instance</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>parent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Schema.html">Schema</a>
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                    &lt;nullable><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The parent which holds this instance</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The name of this key</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
     
 
     
@@ -123,7 +314,7 @@
 	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>0.0.1</li>
+			<li>0.5.0</li>
 		</ul>
 	</dd>
 	
@@ -153,7 +344,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L16">lib/util/util.js#L16</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L31">lib/settings/SchemaFolder.js#L31</a>	</dd>
 	
 
 	
@@ -193,6 +384,418 @@
     
 
     
+        <h3 class="subsection-title">Properties</h3>
+
+        <dl>
+            
+<hr>
+<dt class="name" id="configurableKeys">
+
+    <h4 id="configurableKeys"><span class="type-signature">&lt;readonly> </span>configurableKeys<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Get all configurable keys from this schema.
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L76">lib/settings/SchemaFolder.js#L76</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="defaults">
+
+    <h4 id="defaults"><span class="type-signature"></span>defaults<span class="type-signature"> :Object</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The default values for this schema instance and children.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Object
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L43">lib/settings/SchemaFolder.js#L43</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="keyArray">
+
+    <h4 id="keyArray"><span class="type-signature"></span>keyArray<span class="type-signature"> :Array.&lt;string></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        A pre-processed array with all keys' names.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Array.&lt;string>
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L59">lib/settings/SchemaFolder.js#L59</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="keys">
+
+    <h4 id="keys"><span class="type-signature"></span>keys<span class="type-signature"> :Set.&lt;string></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        A Set containing all keys' names which value is either a Schema or a SchemaPiece instance.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Set.&lt;string>
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L51">lib/settings/SchemaFolder.js#L51</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="type">
+
+    <h4 id="type"><span class="type-signature">&lt;readonly> </span>type<span class="type-signature"> :'Folder'</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The type of this schema instance.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">'Folder'
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L34">lib/settings/SchemaFolder.js#L34</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
+    
 
     
         <h3 class="subsection-title">Methods</h3>
@@ -201,7 +804,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".applyToClass"><span class="type-signature">&lt;static> </span>applyToClass(base, structure [, skips])</h4>
+    <h4 class="name" id="addFolder"><span class="type-signature">&lt;async> </span>addFolder(key [, object] [, force])</h4>
     
     
 </dt>
@@ -209,7 +812,7 @@
 
     
     <div class="description">
-        Applies an interface to a class
+        Create a new nested folder.
     </div>
     
 
@@ -248,13 +851,13 @@
 
         <tr>
             
-                <td class="name"><code>base</code></td>
+                <td class="name"><code>key</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Object
+<span class="param-type">string
 </span>
 
 
@@ -278,20 +881,242 @@
                 </td>
             
 
-            <td class="description last">The interface to apply to a structure</td>
+            <td class="description last">The name's key for the folder</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>structure</code></td>
+                <td class="name"><code>object</code></td>
             
 
             <td class="type">
             
                 
 <span class="param-type">Object
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    {}
+                
+                </td>
+            
+
+            <td class="description last">An object containing all the Schema/SchemaPieces literals for this folder</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>force</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last">Whether this function call should modify all entries from the database</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L89">lib/settings/SchemaFolder.js#L89</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;<a href="Schema.html">Schema</a>>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="addKey"><span class="type-signature">&lt;async> </span>addKey(key, options [, force])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Add a new key to this folder.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string
 </span>
 
 
@@ -315,14 +1140,413 @@
                 </td>
             
 
-            <td class="description last">The structure to apply the interface to</td>
+            <td class="description last">The name for the key</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>skips</code></td>
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">AddOptions
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">The key's options to apply</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>force</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last">Whether this function call should modify all entries from the database</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L157">lib/settings/SchemaFolder.js#L157</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;<a href="Schema.html">Schema</a>>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getDefaults"><span class="type-signature"></span>getDefaults( [data])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get a JSON object with all the default values.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    {}
+                
+                </td>
+            
+
+            <td class="description last">The object to update</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L301">lib/settings/SchemaFolder.js#L301</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getKeys"><span class="type-signature"></span>getKeys( [array])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get all the pathes from this schema's children.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>array</code></td>
             
 
             <td class="type">
@@ -356,700 +1580,7 @@
                 </td>
             
 
-            <td class="description last">The methods to skip when applying this interface</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.1.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L104">lib/util/util.js#L104</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".clean"><span class="type-signature">&lt;static> </span>clean(text)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Cleans sensitive info from strings
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>text</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The text to clean</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L37">lib/util/util.js#L37</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".codeBlock"><span class="type-signature">&lt;static> </span>codeBlock(lang, expression)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Makes a codeblock markup string
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>lang</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The codeblock language</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>expression</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The expression to be wrapped in the codeblock</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L27">lib/util/util.js#L27</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".exec"><span class="type-signature">&lt;static> </span>exec(command [, options])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Promisified version of child_process.exec for use with await
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>command</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The command to run</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>options</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">ExecOptions
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The options to pass to exec</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.3.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L213">lib/util/util.js#L213</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;{stdout: string, stderr: string}>
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".isClass"><span class="type-signature">&lt;static> </span>isClass(input)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Verify if the input is a class constructor.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>input</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The function to verify</td>
+            <td class="description last">The array to push.</td>
         </tr>
 
     
@@ -1098,7 +1629,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L126">lib/util/util.js#L126</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L331">lib/settings/SchemaFolder.js#L331</a>	</dd>
 	
 
 	
@@ -1131,7 +1662,7 @@
     </dt>
     <dd>
         
-<span class="param-type">boolean
+<span class="param-type">Array.&lt;string>
 </span>
 
 
@@ -1149,7 +1680,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".isFunction"><span class="type-signature">&lt;static> </span>isFunction(input)</h4>
+    <h4 class="name" id="getList"><span class="type-signature"></span>getList(msg)</h4>
     
     
 </dt>
@@ -1157,7 +1688,7 @@
 
     
     <div class="description">
-        Verify if the input is a function.
+        Get a list.
     </div>
     
 
@@ -1192,13 +1723,13 @@
 
         <tr>
             
-                <td class="name"><code>input</code></td>
+                <td class="name"><code>msg</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">function
+<span class="param-type"><a href="KlasaMessage.html">KlasaMessage</a>
 </span>
 
 
@@ -1210,7 +1741,7 @@
 
             
 
-            <td class="description last">The function to verify</td>
+            <td class="description last">The Message instance</td>
         </tr>
 
     
@@ -1259,676 +1790,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L116">lib/util/util.js#L116</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".isNumber"><span class="type-signature">&lt;static> </span>isNumber(input)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Verify if a number is a finite number.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>input</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The number to verify</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L149">lib/util/util.js#L149</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".isObject"><span class="type-signature">&lt;static> </span>isObject(input)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Verify if the input is an object literal (or class).
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>input</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The object to verify</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L139">lib/util/util.js#L139</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".newError"><span class="type-signature">&lt;static> </span>newError(error, code)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Generates an error object used for argument reprompting
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>error</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Error
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">An error object</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>code</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The status code to assign to the error</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L73">lib/util/util.js#L73</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Error
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".regExpEsc"><span class="type-signature">&lt;static> </span>regExpEsc(str)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Cleans a string from regex injection
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>str</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The string to clean</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L93">lib/util/util.js#L93</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L267">lib/settings/SchemaFolder.js#L267</a>	</dd>
 	
 
 	
@@ -1979,7 +1841,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".sleep"><span class="type-signature">&lt;static> </span>sleep(delay [, args])</h4>
+    <h4 class="name" id="getSQL"><span class="type-signature"></span>getSQL( [array])</h4>
     
     
 </dt>
@@ -1987,7 +1849,7 @@
 
     
     <div class="description">
-        Promisified version of setTimeout for use with await
+        Get all the SQL schemas from this schema's children.
     </div>
     
 
@@ -2001,553 +1863,6 @@
         
 
 <table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>delay</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The amount of time in ms to delay</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>args</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">*
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Any args to pass to the .then (mostly pointless in this form)</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.3.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L224">lib/util/util.js#L224</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    The args value passed in
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;*>
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".toTitleCase"><span class="type-signature">&lt;static> </span>toTitleCase(str)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Converts a string to Title Case
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>str</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The string to titlecaseify</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L62">lib/util/util.js#L62</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".tryParse"><span class="type-signature">&lt;static> </span>tryParse(value)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Try parse a stringified JSON string.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The value to parse</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L159">lib/util/util.js#L159</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">*
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        </dl>
-    
-
-    
-        <h3 class="subsection-title">Type Definitions</h3>
-
-        <dl>
-                
-<hr>
-<dt class="name" id=".ExecOptions">
-
-    <h4 id=".ExecOptions">ExecOptions</h4>
-
-    
-</dt>
-<dd>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Object
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    <dl>
-
-<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -2573,13 +1888,13 @@
 
         <tr>
             
-                <td class="name"><code>cwd</code></td>
+                <td class="name"><code>array</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string
+<span class="param-type">Array.&lt;string>
 </span>
 
 
@@ -2594,43 +1909,6 @@
                 
 
                 
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    process.cwd()
-                
-                </td>
-            
-
-            <td class="description last">Current working directory of the child process</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>env</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
 
                 
                 </td>
@@ -2639,296 +1917,33 @@
             
                 <td class="default">
                 
-                    {}
+                    []
                 
                 </td>
             
 
-            <td class="description last">Environment key-value pairs</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>encoding</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    'utf8'
-                
-                </td>
-            
-
-            <td class="description last">encoding to use</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>shell</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    os === unix ? '/bin/sh' : process.env.ComSpec
-                
-                </td>
-            
-
-            <td class="description last">Shell to execute the command with</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>timeout</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    0
-                
-                </td>
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>maxBuffer</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    200*1024
-                
-                </td>
-            
-
-            <td class="description last">Largest amount of data in bytes allowed on stdout or stderr. If exceeded, the child process is terminated</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>killSignal</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-|
-
-<span class="param-type">number
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    'SIGTERM'
-                
-                </td>
-            
-
-            <td class="description last"><string> | <integer> (Default: 'SIGTERM')</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>uid</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">Sets the user identity of the process</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>gid</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">Sets the group identity of the process</td>
+            <td class="description last">The array to push.</td>
         </tr>
 
     
     </tbody>
 </table>
-</dl>
 
+    
+
+    
+<dl class="details">
     
 
 	
 
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
 	
 
 	
@@ -2956,7 +1971,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L190">lib/util/util.js#L190</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L317">lib/settings/SchemaFolder.js#L317</a>	</dd>
 	
 
 	
@@ -2968,9 +1983,1144 @@
 
 
     
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;string>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
 </dd>
 
-            </dl>
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getValues"><span class="type-signature"></span>getValues( [array])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get all the SchemaPieces instances from this schema's children. Used for SQL.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>array</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string>
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    []
+                
+                </td>
+            
+
+            <td class="description last">The array to push.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L345">lib/settings/SchemaFolder.js#L345</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;<a href="SchemaPiece.html">SchemaPiece</a>>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="hasKey"><span class="type-signature"></span>hasKey(key)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Check if the key exists in this folder.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The key to check</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L145">lib/settings/SchemaFolder.js#L145</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removeFolder"><span class="type-signature">&lt;async> </span>removeFolder(key [, force])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Remove a nested folder.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">The folder's name to remove</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>force</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last">Whether this function call should modify all entries from the database</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L117">lib/settings/SchemaFolder.js#L117</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;<a href="Schema.html">Schema</a>>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removeKey"><span class="type-signature">&lt;async> </span>removeKey(key [, force])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Remove a key from this folder.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">The key's name to remove</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>force</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last">Whether this function call should modify all entries from the database</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L198">lib/settings/SchemaFolder.js#L198</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;<a href="Schema.html">Schema</a>>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="resolveString"><span class="type-signature"></span>resolveString()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L357">lib/settings/SchemaFolder.js#L357</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="toJSON"><span class="type-signature"></span>toJSON()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get a JSON object containing all the objects from this schema's children.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L449">lib/settings/SchemaFolder.js#L449</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">any
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="toString"><span class="type-signature"></span>toString()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaFolder.js#L457">lib/settings/SchemaFolder.js#L457</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
     
 
     

@@ -34,7 +34,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="ArgResolver.html">ArgResolver</a></li><li><a href="Command.html">Command</a></li><li><a href="CommandStore.html">CommandStore</a></li><li><a href="Configuration.html">Configuration</a></li><li><a href="Event.html">Event</a></li><li><a href="EventStore.html">EventStore</a></li><li><a href="Extendable.html">Extendable</a></li><li><a href="ExtendableStore.html">ExtendableStore</a></li><li><a href="Finalizer.html">Finalizer</a></li><li><a href="FinalizerStore.html">FinalizerStore</a></li><li><a href="Gateway.html">Gateway</a></li><li><a href="GatewayDriver.html">GatewayDriver</a></li><li><a href="GatewayStorage.html">GatewayStorage</a></li><li><a href="Inhibitor.html">Inhibitor</a></li><li><a href="InhibitorStore.html">InhibitorStore</a></li><li><a href="KlasaClient.html">KlasaClient</a></li><li><a href="KlasaConsole.html">KlasaConsole</a></li><li><a href="KlasaGuild.html">KlasaGuild</a></li><li><a href="KlasaMessage.html">KlasaMessage</a></li><li><a href="KlasaUser.html">KlasaUser</a></li><li><a href="Language.html">Language</a></li><li><a href="LanguageStore.html">LanguageStore</a></li><li><a href="Monitor.html">Monitor</a></li><li><a href="MonitorStore.html">MonitorStore</a></li><li><a href="ParsedUsage.html">ParsedUsage</a></li><li><a href="PermissionLevels.html">PermissionLevels</a></li><li><a href="Piece.html">Piece</a></li><li><a href="Possible.html">Possible</a></li><li><a href="Provider.html">Provider</a></li><li><a href="ProviderStore.html">ProviderStore</a></li><li><a href="ReactionHandler.html">ReactionHandler</a></li><li><a href="Resolver.html">Resolver</a></li><li><a href="RichDisplay.html">RichDisplay</a></li><li><a href="RichMenu.html">RichMenu</a></li><li><a href="Schema.html">Schema</a></li><li><a href="SchemaPiece.html">SchemaPiece</a></li><li><a href="SettingResolver.html">SettingResolver</a></li><li><a href="Stopwatch.html">Stopwatch</a></li><li><a href="Store.html">Store</a></li><li><a href="Tag.html">Tag</a></li><li><a href="Timestamp.html">Timestamp</a></li><li><a href="Util.html">Util</a></li>
+					<li><a href="ArgResolver.html">ArgResolver</a></li><li><a href="Command.html">Command</a></li><li><a href="CommandStore.html">CommandStore</a></li><li><a href="Configuration.html">Configuration</a></li><li><a href="Event.html">Event</a></li><li><a href="EventStore.html">EventStore</a></li><li><a href="Extendable.html">Extendable</a></li><li><a href="ExtendableStore.html">ExtendableStore</a></li><li><a href="Finalizer.html">Finalizer</a></li><li><a href="FinalizerStore.html">FinalizerStore</a></li><li><a href="Gateway.html">Gateway</a></li><li><a href="GatewayDriver.html">GatewayDriver</a></li><li><a href="GatewayStorage.html">GatewayStorage</a></li><li><a href="Inhibitor.html">Inhibitor</a></li><li><a href="InhibitorStore.html">InhibitorStore</a></li><li><a href="KlasaClient.html">KlasaClient</a></li><li><a href="KlasaConsole.html">KlasaConsole</a></li><li><a href="KlasaGuild.html">KlasaGuild</a></li><li><a href="KlasaMessage.html">KlasaMessage</a></li><li><a href="KlasaUser.html">KlasaUser</a></li><li><a href="Language.html">Language</a></li><li><a href="LanguageStore.html">LanguageStore</a></li><li><a href="Monitor.html">Monitor</a></li><li><a href="MonitorStore.html">MonitorStore</a></li><li><a href="ParsedUsage.html">ParsedUsage</a></li><li><a href="PermissionLevels.html">PermissionLevels</a></li><li><a href="Piece.html">Piece</a></li><li><a href="Possible.html">Possible</a></li><li><a href="Provider.html">Provider</a></li><li><a href="ProviderStore.html">ProviderStore</a></li><li><a href="ReactionHandler.html">ReactionHandler</a></li><li><a href="Resolver.html">Resolver</a></li><li><a href="RichDisplay.html">RichDisplay</a></li><li><a href="RichMenu.html">RichMenu</a></li><li><a href="Schema.html">Schema</a></li><li><a href="SchemaFolder.html">SchemaFolder</a></li><li><a href="SchemaPiece.html">SchemaPiece</a></li><li><a href="SettingResolver.html">SettingResolver</a></li><li><a href="Stopwatch.html">Stopwatch</a></li><li><a href="Store.html">Store</a></li><li><a href="Tag.html">Tag</a></li><li><a href="Timestamp.html">Timestamp</a></li><li><a href="Util.html">Util</a></li>
 				</ul>
 			</li>
 			
@@ -104,7 +104,7 @@ module.exports = class extends Provider {
 
 	/**
 	 * Checks if a directory exists.
-	 * @param {string} table The name of the table you want to check.
+	 * @param {string} table The name of the table you want to check
 	 * @returns {Promise&lt;boolean>}
 	 */
 	hasTable(table) {
@@ -113,7 +113,7 @@ module.exports = class extends Provider {
 
 	/**
 	 * Creates a new directory.
-	 * @param {string} table The name for the new directory.
+	 * @param {string} table The name for the new directory
 	 * @returns {Promise&lt;Void>}
 	 */
 	createTable(table) {
@@ -122,7 +122,7 @@ module.exports = class extends Provider {
 
 	/**
 	 * Recursively deletes a directory.
-	 * @param {string} table The directory's name to delete.
+	 * @param {string} table The directory's name to delete
 	 * @returns {Promise&lt;Void>}
 	 */
 	deleteTable(table) {
@@ -134,7 +134,7 @@ module.exports = class extends Provider {
 
 	/**
 	 * Get all documents from a directory.
-	 * @param {string} table The name of the directory to fetch from.
+	 * @param {string} table The name of the directory to fetch from
 	 * @returns {Promise&lt;Object[]>}
 	 */
 	getAll(table) {
@@ -145,8 +145,8 @@ module.exports = class extends Provider {
 
 	/**
 	 * Get a document from a directory.
-	 * @param {string} table The name of the directory.
-	 * @param {string} document The document name.
+	 * @param {string} table The name of the directory
+	 * @param {string} document The document name
 	 * @returns {Promise&lt;?Object>}
 	 */
 	get(table, document) {
@@ -155,8 +155,8 @@ module.exports = class extends Provider {
 
 	/**
 	 * Check if the document exists.
-	 * @param {string} table The name of the directory.
-	 * @param {string} document The document name.
+	 * @param {string} table The name of the directory
+	 * @param {string} document The document name
 	 * @returns {Promise&lt;boolean>}
 	 */
 	has(table, document) {
@@ -165,7 +165,7 @@ module.exports = class extends Provider {
 
 	/**
 	 * Get a random document from a directory.
-	 * @param {string} table The name of the directory.
+	 * @param {string} table The name of the directory
 	 * @returns {Promise&lt;Object>}
 	 */
 	getRandom(table) {
@@ -174,9 +174,9 @@ module.exports = class extends Provider {
 
 	/**
 	 * Insert a new document into a directory.
-	 * @param {string} table The name of the directory.
-	 * @param {string} document The document name.
-	 * @param {Object} data The object with all properties you want to insert into the document.
+	 * @param {string} table The name of the directory
+	 * @param {string} document The document name
+	 * @param {Object} data The object with all properties you want to insert into the document
 	 * @returns {Promise&lt;Void>}
 	 */
 	create(table, document, data) {
@@ -193,9 +193,9 @@ module.exports = class extends Provider {
 
 	/**
 	 * Update a document from a directory.
-	 * @param {string} table The name of the directory.
-	 * @param {string} document The document name.
-	 * @param {Object} data The object with all the properties you want to update.
+	 * @param {string} table The name of the directory
+	 * @param {string} document The document name
+	 * @param {Object} data The object with all the properties you want to update
 	 * @returns {Promise&lt;Void>}
 	 */
 	update(table, document, data) {
@@ -205,9 +205,9 @@ module.exports = class extends Provider {
 
 	/**
 	 * Replace all the data from a document.
-	 * @param {string} table The name of the directory.
-	 * @param {string} document The document name.
-	 * @param {Object} data The new data for the document.
+	 * @param {string} table The name of the directory
+	 * @param {string} document The document name
+	 * @param {Object} data The new data for the document
 	 * @returns {Promise&lt;Void>}
 	 */
 	replace(table, document, data) {
@@ -216,8 +216,8 @@ module.exports = class extends Provider {
 
 	/**
 	 * Delete a document from the table.
-	 * @param {string} table The name of the directory.
-	 * @param {string} document The document name.
+	 * @param {string} table The name of the directory
+	 * @param {string} document The document name
 	 * @returns {Promise&lt;Void>}
 	 */
 	delete(table, document) {
