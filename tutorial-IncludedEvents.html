@@ -102,8 +102,12 @@
 <p>Re-emits the Discord.js debug event as log event, if enabled.</p>
 <p><strong>Source:</strong></p>
 <p><a href="https://github.com/dirigeants/klasa/blob/master/src/events/error.js">events/error.js</a></p>
+<h2>guildCreate</h2>
+<p>Checks if the guild is blacklisted for automatic leaving.</p>
+<p><strong>Source:</strong></p>
+<p><a href="https://github.com/dirigeants/klasa/blob/master/src/events/guildCreate.js">events/guildCreate.js</a></p>
 <h2>guildDelete</h2>
-<p>Removes SettingGateway entries for the guild.</p>
+<p>If <code>KlasaClientOptions.preserveConfigs</code> is set to <code>false</code> (defaults to <code>true</code> if not set), this event deletes entries from the database to free up space.</p>
 <p><strong>Source:</strong></p>
 <p><a href="https://github.com/dirigeants/klasa/blob/master/src/events/guildDelete.js">events/guildDelete.js</a></p>
 <h2>log</h2>
@@ -114,10 +118,22 @@
 <p>Runs monitors.</p>
 <p><strong>Source:</strong></p>
 <p><a href="https://github.com/dirigeants/klasa/blob/master/src/events/message.js">events/message.js</a></p>
+<h2>messageDelete</h2>
+<p>If the message ran a command with the property <code>deletable</code> set to <code>true</code>, this event will delete the response.</p>
+<p><strong>Source:</strong></p>
+<p><a href="https://github.com/dirigeants/klasa/blob/master/src/events/messageDelete.js">events/messageDelete.js</a></p>
+<h2>messageDeleteBulk</h2>
+<p>Re-emits all the messages deleted to the <code>messageDelete</code> event.</p>
+<p><strong>Source:</strong></p>
+<p><a href="https://github.com/dirigeants/klasa/blob/master/src/events/messageDeleteBulk.js">events/messageDeleteBulk.js</a></p>
 <h2>messageUpdate</h2>
 <p>Re-emits if command editing is enabled, and if the content is not the same, to check and see if the new message is a edited command.</p>
 <p><strong>Source:</strong></p>
 <p><a href="https://github.com/dirigeants/klasa/blob/master/src/events/messageUpdate.js">events/messageUpdate.js</a></p>
+<h2>monitorError</h2>
+<p>Handles the errors thrown by any of the monitors.</p>
+<p><strong>Source:</strong></p>
+<p><a href="https://github.com/dirigeants/klasa/blob/master/src/events/monitorError.js">events/monitorError.js</a></p>
 <h2>verbose</h2>
 <p>Logs verbose messages to the console.</p>
 <p><strong>Source:</strong></p>

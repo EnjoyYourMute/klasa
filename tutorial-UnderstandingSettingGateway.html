@@ -124,17 +124,17 @@ client.login('A_BEAUTIFUL_TOKEN_AINT_IT?');
 <p>What have we done? <code>client.gateways.guilds.schema</code> is a <strong>SchemaFolder</strong> instance (also called Folder type) which can manage itself, such as adding keys/folders to itself (it certainly follows the OOP paradigm).</p>
 <h2>Editing keys from the guild configuration.</h2>
 <p>Now that I have a new key called <code>modlogs</code>, I want to configure it outside the <code>conf</code> command, how can we do this?</p>
-<pre class="prettyprint source lang-javascript"><code>msg.guild.configs.updateOne('modlogs', '267727088465739778', msg.guild);
+<pre class="prettyprint source lang-javascript"><code>msg.guild.configs.update('modlogs', '267727088465739778', msg.guild);
 </code></pre>
 <p>Check: <code>Configuration.updateOne</code></p>
 <blockquote>
 <p>You can use a Channel instance, <a href="SettingResolver.html"><code>SettingResolver</code></a> will make sure the input is valid and the database gets an <strong>ID</strong> and not an object.</p>
 </blockquote>
 <p>Now, I want to <strong>add</strong> a new user user to the <code>users</code> key, which takes an array.</p>
-<pre class="prettyprint source lang-javascript"><code>msg.guild.configs.updateArray(msg.guild, 'add', 'users', '146048938242211840', msg.guild);
+<pre class="prettyprint source lang-javascript"><code>msg.guild.configs.update('users', '146048938242211840', msg.guild, { action: 'add' });
 </code></pre>
 <p>That will add the user <code>'146048938242211840'</code> to the <code>users</code> array. To remove it:</p>
-<pre class="prettyprint source lang-javascript"><code>msg.guild.configs.updateArray(msg.guild, 'remove', 'users', '146048938242211840', msg.guild);
+<pre class="prettyprint source lang-javascript"><code>msg.guild.configs.update('users', '146048938242211840', msg.guild, { action: 'remove' });
 </code></pre>
 <p>Check: <code>Configuration.updateArray</code></p>
 <h2>Removing a key from the guild configuration.</h2>
