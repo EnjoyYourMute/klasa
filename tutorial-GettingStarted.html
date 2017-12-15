@@ -102,7 +102,7 @@ new Client({
     readyMessage: (client) => `${client.user.tag}, Ready to serve ${client.guilds.size} guilds and ${client.users.size} users`
 }).login('your-bot-token');
 </code></pre>
-<h3>Configuration Options: <code>KlasaClientConfig</code></h3>
+<h3>Configuration Options: <a href="KlasaClient.html#.KlasaClientOptions"><code>KlasaClientOptions</code></a></h3>
 <table>
 <thead>
 <tr>
@@ -114,70 +114,16 @@ new Client({
 </thead>
 <tbody>
 <tr>
-<td><strong>clientOptions</strong></td>
-<td><code>{}</code></td>
-<td>Object</td>
-<td>These are passed directly to the discord.js library. They are optional.¹</td>
-</tr>
-<tr>
-<td><strong>prefix</strong></td>
-<td><code>undefined</code></td>
-<td>string/regex/array</td>
-<td>The default prefix(es) when the bot first boots up.²</td>
-</tr>
-<tr>
-<td><strong>permissionLevels</strong></td>
-<td><code>defaultPermissionLevels</code></td>
-<td>PermissionLevels</td>
-<td>The permission levels to use with this bot</td>
-</tr>
-<tr>
 <td><strong>clientBaseDir</strong></td>
-<td>see below³</td>
+<td>see below¹</td>
 <td>string</td>
 <td>The directory where all piece folders can be found</td>
 </tr>
 <tr>
-<td><strong>commandMessageLifetime</strong></td>
-<td><code>1800</code></td>
-<td>number</td>
-<td>The threshold for when comand messages should be sweeped in seconds since last edit</td>
-</tr>
-<tr>
-<td><strong>provider</strong></td>
-<td><code>json</code></td>
-<td>string</td>
-<td>The provider to use in Klasa</td>
-</tr>
-<tr>
-<td><strong>language</strong></td>
-<td><code>en-US</code></td>
-<td>string</td>
-<td>The default language Klasa should opt-in for the commands</td>
-</tr>
-<tr>
-<td><strong>promptTime</strong></td>
-<td><code>30000</code></td>
-<td>number</td>
-<td>The amount of time in milliseconds prompts should last</td>
-</tr>
-<tr>
-<td><strong>ignoreBots</strong></td>
-<td><code>true</code></td>
-<td>boolean</td>
-<td>Whether or not this bot should ignore other bots</td>
-</tr>
-<tr>
-<td><strong>ignoreSelf</strong></td>
-<td><code>client.user.bot</code></td>
-<td>boolean</td>
-<td>Whether or not this bot should ignore itself (true for bots, false for selfbots)</td>
-</tr>
-<tr>
-<td><strong>cmdPrompt</strong></td>
+<td><strong>cmdDeleting</strong></td>
 <td><code>false</code></td>
 <td>boolean</td>
-<td>Whether the bot should prompt missing parameters</td>
+<td>Whether the bot should delete responses if the command is deleted</td>
 </tr>
 <tr>
 <td><strong>cmdEditing</strong></td>
@@ -192,16 +138,70 @@ new Client({
 <td>Whether the bot should log command usage</td>
 </tr>
 <tr>
+<td><strong>cmdPrompt</strong></td>
+<td><code>false</code></td>
+<td>boolean</td>
+<td>Whether the bot should prompt missing parameters</td>
+</tr>
+<tr>
+<td><strong>commandMessageLifetime</strong></td>
+<td><code>1800</code></td>
+<td>number</td>
+<td>The threshold for when comand messages should be sweeped in seconds since last edit</td>
+</tr>
+<tr>
+<td><strong>ignoreBots</strong></td>
+<td><code>true</code></td>
+<td>boolean</td>
+<td>Whether or not this bot should ignore other bots</td>
+</tr>
+<tr>
+<td><strong>ignoreSelf</strong></td>
+<td><code>client.user.bot</code></td>
+<td>boolean</td>
+<td>Whether or not this bot should ignore itself (true for bots, false for selfbots)</td>
+</tr>
+<tr>
+<td><strong>language</strong></td>
+<td><code>en-US</code></td>
+<td>string</td>
+<td>The default language Klasa should opt-in for the commands</td>
+</tr>
+<tr>
+<td><strong>ownerID</strong></td>
+<td>see below²</td>
+<td>string</td>
+<td>The discord id for the user the bot should respect as the owner</td>
+</tr>
+<tr>
+<td><strong>permissionLevels</strong></td>
+<td><code>defaultPermissionLevels</code></td>
+<td>PermissionLevels</td>
+<td>The permission levels to use with this bot</td>
+</tr>
+<tr>
+<td><strong>prefix</strong></td>
+<td><code>undefined</code></td>
+<td>string/array</td>
+<td>The default prefix(es) when the bot first boots up.³</td>
+</tr>
+<tr>
+<td><strong>promptTime</strong></td>
+<td><code>30000</code></td>
+<td>number</td>
+<td>The amount of time in milliseconds prompts should last</td>
+</tr>
+<tr>
+<td><strong>provider.engine</strong></td>
+<td><code>json</code></td>
+<td>string</td>
+<td>The provider to use in Klasa</td>
+</tr>
+<tr>
 <td><strong>quotedStringSupport</strong></td>
 <td><code>false</code></td>
 <td>boolean</td>
 <td>Whether the bot should default to using quoted string support⁴</td>
-</tr>
-<tr>
-<td><strong>typing</strong></td>
-<td><code>false</code></td>
-<td>boolean</td>
-<td>Whether the bot should type while processing commands.</td>
 </tr>
 <tr>
 <td><strong>readyMessage</strong></td>
@@ -210,26 +210,28 @@ new Client({
 <td>readyMessage to be passed through to Klasa's ready event.</td>
 </tr>
 <tr>
-<td><strong>ownerID</strong></td>
-<td>see below⁶</td>
-<td>string</td>
-<td>The discord id for the user the bot should respect as the owner</td>
-</tr>
-<tr>
 <td><strong>regexPrefix</strong></td>
 <td><code>null</code></td>
 <td>regex</td>
 <td>The regular expression prefix if one is provided</td>
 </tr>
+<tr>
+<td><strong>typing</strong></td>
+<td><code>false</code></td>
+<td>boolean</td>
+<td>Whether the bot should type while processing commands.</td>
+</tr>
 </tbody>
 </table>
 <blockquote>
-<p>1: For more information on which D.JS options are available, see <a href="https://discord.js.org/#/docs/main/master/typedef/ClientOptions">ClientOptions in the discord.js docs</a>.<br>
-2: This option becomes useless after first boot, since the prefix is written to the default configuration system. Pass an array to accept multiple prefixes.<br>
-3: The directory of the main file. <code>path.dirname(require.main.filename)</code><br>
-4: quotedStringSupport is overridable per command<br>
-5: <code>Successfully initialized. Ready to serve ${client.guilds.size} guilds.</code><br>
-6: ID gotten from the Discord api if not provided: <code>client.application.owner.id</code></p>
+<p>1: The directory of the main file. <code>path.dirname(require.main.filename)</code>
+2: ID gotten from the Discord api if not provided: <code>client.application.owner.id</code>
+3: You can pass an array to accept multiple prefixes.
+4: quotedStringSupport is overridable per command
+5: <code>Successfully initialized. Ready to serve ${client.guilds.size} guilds.</code></p>
+</blockquote>
+<blockquote>
+<p>KlasaClientOptions are merged with discord.js' ClientOptions, see <a href="https://discord.js.org/#/docs/main/master/typedef/ClientOptions">ClientOptions in the discord.js docs</a>.</p>
 </blockquote>
 <h2>Running the bot</h2>
 <p>Then, run the following in your folder:</p>
