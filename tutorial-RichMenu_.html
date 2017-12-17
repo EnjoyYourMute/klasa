@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Klasa Tutorial: Using RichDisplay for Paginated Embeds</title>
+	<title>Klasa Tutorial: Using RichMenu for Paginated Menus</title>
 	<link rel="shortcut icon" href="img/favicon.ico">
 
 	<!--[if lt IE 9]>
@@ -74,97 +74,74 @@
 			<section class="tutorial-section">
 
 <header>
-    <h1>Using RichDisplay for Paginated Embeds</h1>
+    <h1>Using RichMenu for Paginated Menus</h1>
 </header>
 
 <article>
-    <p><a href="RichDisplay.html"><code>RichDisplay</code></a> allows you to create a paginated embed that users of your bot will be able to browse by using reaction-based navigation.</p>
-<p>An extremely simple working example can achieved by this code:</p>
-<pre class="prettyprint source lang-javascript"><code>const { Command, RichDisplay } = require('klasa');
-
-module.exports = class extends Command {
-
-	constructor(...args) {
-		super(...args, { description: 'Test RichDisplay' });
-	}
-
-	async run(msg) {
-		return new RichDisplay()
-			.addPage(new Embed().setDescription('First page'))
-			.addPage(new Embed().setDescription('Second page'))
-			.run(await msg.sendMessage('Loading...'));
-	}
-
-};
-</code></pre>
-<p>A more complex example with an actual usage is this:</p>
-<pre class="prettyprint source lang-javascript"><code>const images = [
-	'https://i.imgur.com/gh3vYgj.jpg',
-	'https://i.imgur.com/vBV81m4.jpg',
-	'https://i.imgur.com/92hAsqe.jpg'
-];
-
-const display = new RichDisplay(new this.client.methods.Embed()
+    <p>While <a href="tutorial-RichDisplay_.html">Using RichDisplay for Paginated Embeds</a> allows you to create fully configurable paginated embeds, <a href="RichMenu.html"><code>RichMenu</code></a> allows you to define menus using a similar interface.</p>
+<p>Unlike <a href="tutorial-RichDisplay_.html">Using RichDisplay for Paginated Embeds</a>, <a href="RichMenu.html"><code>RichMenu</code></a> manages a page's content and layout automatically and instead of calling <code>RichDisplay.addPage</code> that allows to customize the template (if provided), the user is presented with the <code>RichMenu.addOption</code> method, which only requires a <code>name</code> and a <code>body</code> and handles the organization of the options automatically.</p>
+<p>Like <a href="tutorial-RichDisplay_.html">Using RichDisplay for Paginated Embeds</a> there is the option to define a template <a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed"><code>MessageEmbed</code></a> in its constructor, but it will be applied automatically to each page of the menu.</p>
+<p>An example of how <a href="RichMenu.html"><code>RichMenu</code></a> could be used is in a <code>help</code>-like command, this is a simple demo of how it would work:</p>
+<pre class="prettyprint source lang-javascript"><code>const menu = new RichMenu(new this.client.methods.Embed()
 	.setColor(0x673AB7)
-	.setAuthor(this.client.user.name, this.client.user.avatarURL())
-	.setTitle('Norway Pictures Slideshow')
-	.setDescription('Scroll between the images using the provided reaction emotes.')
+	.setAuthor(this.client.user.username, this.client.user.avatarURL())
+	.setTitle('Advanced Commands Help:')
+	.setDescription('Use the arrow reactions to scroll between pages.\nUse number reactions to select an option.')
 );
 
-for (let i = 0; i &lt; images.length; i++) {
-	display.addPage(template => template.setImage(images[i]));
+for (const command of this.client.commands.values()) {
+	menu.addOption(command.name, command.description);
 }
 
-return display.run(await msg.sendMessage('Loading slideshow...'));
+const collector = await menu.run(await msg.send('Loading commands...'));
+
+const choice = await collector.selection;
+if (choice === null) {
+	return collector.message.delete();
+}
+
+const command = this.client.commands.get(menu.options[choice].name);
+const info = new this.client.methods.Embed()
+	.setTitle(`Command \`${msg.guild.configs.prefix}${command.name}\``)
+	.setDescription(typeof command.description == 'function' ? command.description(msg) : command.description)
+	.addField('Usage:', command.usageString);
+
+if (command.extendedHelp && command.extendedHelp != '') {
+	info.addField('Help:', typeof command.extendedHelp == 'function' ? command.extendedHelp(msg) : command.extendedHelp);
+}
+
+return collector.message.edit(info);
 </code></pre>
 <blockquote>
-<p>The code is contained in the block of the aforementioned command, inside the <code>async run(msg)</code> method but the display or its pages can easily be reused by placing its initialization in the command's constructor method.</p>
+<p>The code is designed to be placed in a command, inside the <code>async run(msg)</code> method but the menu or its options can easily be initialized within the constructor method or the <code>Command.init</code> method of the command.</p>
 </blockquote>
 <h2>Code Analysis</h2>
-<p>First we create a new <a href="RichDisplay.html"><code>RichDisplay</code></a> instance, but this time we pass in a <a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed"><code>MessageEmbed</code></a> instance, which will represent our template, from which we will be able to extend upon to create our pages later on:</p>
-<pre class="prettyprint source lang-javascript"><code>const display = new RichDisplay(new this.client.methods.Embed()
-	/* ... */
-);
-</code></pre>
-<p>This <a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed"><code>MessageEmbed</code></a> instance will be accessible to us by either calling the <code>RichDisplay.template</code> property of the <a href="RichDisplay.html"><code>RichDisplay</code></a> instance, in a cloned manner, or directly through the <code>RichDisplay.addPage</code> method, if we pass in an arrow function or a callback.</p>
-<pre class="prettyprint source lang-javascript"><code>for (/* ... */) {
-	display.addPage(template => /* ... */);
+<p>The creation of the <a href="RichMenu.html"><code>RichMenu</code></a> is the same as the one displayed in <a href="tutorial-RichDisplay_.html">Using RichDisplay for Paginated Embeds</a>, like most of the code and personalization options. Please refer to the <a href="tutorial-RichDisplay_.html">Using RichDisplay for Paginated Embeds</a> tutorial.</p>
+<p>We begin by adding the options, which will be listed in the same order we defined.</p>
+<pre class="prettyprint source lang-javascript"><code>for (const command of /* ... */) {
+	menu.addOption(command.name, command.description);
 }
 </code></pre>
-<p>From here we will be able to add content or edit properties of the template, and then, return the final embed to the <code>RichDisplay.addPage</code> method to be processed into a <a href="RichDisplay.html"><code>RichDisplay</code></a> page.
-In our example, we will simply add a static image from the array we defined before.</p>
-<pre class="prettyprint source lang-javascript"><code>/* ... */
-	display.addPage(template => {
-		template.setImage(images[i])
-			.setColor(0xF44336); // You can change everything of the template
-	});
+<p>After listing all the options we can call <code>RichMenu.run</code> on our menu to render it.
+We will store the resulting <a href="ReactionHandler.html"><code>ReactionHandler</code></a> to later access the selected option.</p>
+<pre class="prettyprint source lang-javascript"><code>const collector = await menu.run(await msg.send('Loading Commands...'));
 </code></pre>
-<p>Then, after the <a href="RichDisplay.html"><code>RichDisplay</code></a> is setup, we return, executing it on a new message.</p>
-<pre class="prettyprint source lang-javascript"><code>return display.run(await msg.sendMessage('Loading slideshow...'));
+<p>We will also need to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await"><code>await</code></a> for the user to select an option before continuing:</p>
+<pre class="prettyprint source lang-javascript"><code>const choice = await collector.selection;
 </code></pre>
-<p>The message will show the content we denfined in <code>KlasaMessage.sendMessage</code> initially, then, when our <a href="RichDisplay.html"><code>RichDisplay</code></a> will be ready it will replace the content with the first page we defined.</p>
-<h2>Info Page</h2>
-<p>We can also define an Info page, which will be available through the appropriate reaction emote.
-All we have to do is simply call the <code>RichDisplay.setInfoPage</code> instead than <code>RichDisplay.addPage</code>. The template will be available to us in the same ways as before.</p>
-<blockquote>
-<p>Note: only one info page can be set at once. Setting the info page more than once will override the previously defined info page.</p>
-</blockquote>
+<p>After obtaining the index of the selected option we can access the option's name through our menu:</p>
+<pre class="prettyprint source lang-javascript"><code>const command = /* ... */(menu.options[choice].name);
+</code></pre>
+<p>Finally, we show the user the selected command by editing the original <a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed"><code>MessageEmbed</code></a>:</p>
+<pre class="prettyprint source lang-javascript"><code>const info = new this.client.methods.Embed()
+	/* ... */;
+
+return collector.message.edit(info);
+</code></pre>
 <h2>Personalization</h2>
-<p>Behavior managing can be handled through the second (optional) argument of the <code>RichDisplay.run</code> method.
-The configuration must be defined as an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object literal</a>.
-Please refer to the <a href="RichDisplay.html#.RichDisplayRunOptions"><code>RichDisplay.RichDisplayRunOptions</code></a> documentation page for information about each specific option.</p>
-<h3>Custom Behavior Handling</h3>
-<p>To handle whether or not a user should trigger an action when interacting with the reactions applied to the embed you can provide a <code>filter</code> function, which will be called every time a user reacts to the embed.</p>
-<p>A simple example for this would be a filter that only allows the user who executes the command to interact with it:</p>
-<pre class="prettyprint source lang-javascript"><code>display.run(await msg.sendMessage('Loading slideshow...'), { filter: (reaction, user) => user === msg.author });
-</code></pre>
+<p>Personalization is the same offered by <a href="tutorial-RichDisplay_.html">Using RichDisplay for Paginated Embeds</a>. You can define an Info Page through <code>RichDisplay.setInfoPage</code> and you can define custom behavior handling by defining a function in the <code>filter</code> argument of <a href="RichMenu.html#.RichMenuRunOptions"><code>RichMenu.RichMenuRunOptions</code></a></p>
 </article>
 
-
-<h2>Further Reading:</h2>
-<ul>
-    <li><a href="tutorial-RichMenu_.html">Using RichMenu for Paginated Menus</a></li>
-</ul>
 
 
 </section>
