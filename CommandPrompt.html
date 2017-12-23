@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Klasa Class: FinalizerStore</title>
+	<title>Klasa Class: CommandPrompt</title>
 	<link rel="shortcut icon" href="img/favicon.ico">
 
 	<!--[if lt IE 9]>
@@ -73,16 +73,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: FinalizerStore</h1>
+	<h1 class="page-title">Class: CommandPrompt</h1>
 <section>
 
 <header>
     
         <h2>
-        FinalizerStore
+        CommandPrompt
         </h2>
         
-            <div class="class-description">Stores all finalizers for use in Klasa.</div>
+            <div class="class-description">A class to handle argument collection and parameter resolution for commands</div>
         
     
 </header>
@@ -94,1391 +94,12 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="FinalizerStore"><span class="type-signature"></span>new FinalizerStore(client)</h4>
+    <h4 class="name" id="CommandPrompt"><span class="type-signature"></span>new CommandPrompt(msg, usage, options)</h4>
     
     
 </dt>
 <dd>
 
-    
-    <div class="description">
-        Constructs our FinalizerStore for use in Klasa
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>client</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="KlasaClient.html">KlasaClient</a>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The Klasa client</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-    <dt class="implements">Implements:</dt>
-    <dd class="implements"><ul>
-        
-            <li><a href="Store.html">Store</a></li>
-        
-    </ul></dd>
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/FinalizerStore.js#L18">lib/structures/FinalizerStore.js#L18</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-    
-    </div>
-
-    
-        <h3 class="subsection-title">Extends</h3>
-
-        
-
-
-    <ul>
-        <li><a href="https://discord.js.org/#/docs/main/master/class/Collection">external:Collection</a></ul>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Properties</h3>
-
-        <dl>
-            
-<hr>
-<dt class="name" id="client">
-
-    <h4 id="client"><span class="type-signature">&lt;readonly> </span>client<span class="type-signature"> :<a href="KlasaClient.html">KlasaClient</a></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The client this FinalizerStore was created with.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type"><a href="KlasaClient.html">KlasaClient</a>
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/FinalizerStore.js#L21">lib/structures/FinalizerStore.js#L21</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="coreDir">
-
-    <h4 id="coreDir"><span class="type-signature"></span>coreDir<span class="type-signature"> :String</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The directory of finalizers in Klasa relative to where its installed.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">String
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/FinalizerStore.js#L35">lib/structures/FinalizerStore.js#L35</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="holds">
-
-    <h4 id="holds"><span class="type-signature"></span>holds<span class="type-signature"> :<a href="Finalizer.html">Finalizer</a></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The type of structure this store holds
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type"><a href="Finalizer.html">Finalizer</a>
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.1.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/FinalizerStore.js#L49">lib/structures/FinalizerStore.js#L49</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="name">
-
-    <h4 id="name"><span class="type-signature"></span>name<span class="type-signature"> :String</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The name of what this holds
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">String
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.3.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/FinalizerStore.js#L56">lib/structures/FinalizerStore.js#L56</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="userDir">
-
-    <h4 id="userDir"><span class="type-signature"></span>userDir<span class="type-signature"> :String</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The directory of local finalizers relative to where you run Klasa from.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">String
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/FinalizerStore.js#L42">lib/structures/FinalizerStore.js#L42</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        </dl>
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        <dl>
-            
-<hr>
-<dt>
-    <h4 class="name" id="delete"><span class="type-signature"></span>delete(name)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Deletes a finalizer from the store
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="Finalizer.html">Finalizer</a>
-</span>
-|
-
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The finalizer object or a string representing the structure this store caches</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/FinalizerStore.js#L65">lib/structures/FinalizerStore.js#L65</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    whether or not the delete was successful.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="init"><span class="type-signature"></span>init()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Initializes all pieces in this store.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-    <dt class="implements">Implements:</dt>
-    <dd class="implements"><ul>
-        
-            <li><a href="Store.html#init">Store#init</a></li>
-        
-    </ul></dd>
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/interfaces/Store.js#L22">lib/structures/interfaces/Store.js#L22</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Array
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="load"><span class="type-signature"></span>load(dir, file)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Loads a piece into Klasa so it can be saved in this store.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>dir</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The user directory or core directory where this file is saved</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>file</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-|
-
-<span class="param-type">Array.&lt;string>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">A string or array of strings showing where the file is located.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-    <dt class="implements">Implements:</dt>
-    <dd class="implements"><ul>
-        
-            <li><a href="Store.html#load">Store#load</a></li>
-        
-    </ul></dd>
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/interfaces/Store.js#L33">lib/structures/interfaces/Store.js#L33</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Piece.html">Piece</a>
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="loadAll"><span class="type-signature">&lt;async> </span>loadAll()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Loads all of our pieces from both the user and core directories.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-    <dt class="implements">Implements:</dt>
-    <dd class="implements"><ul>
-        
-            <li><a href="Store.html#loadAll">Store#loadAll</a></li>
-        
-    </ul></dd>
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/interfaces/Store.js#L52">lib/structures/interfaces/Store.js#L52</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    The number of pieces loaded.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">number
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="resolve"><span class="type-signature"></span>resolve(name)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Resolve a string or piece into a piece object.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="Piece.html">Piece</a>
-</span>
-|
-
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The piece object or a string representing a piece's name</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-    <dt class="implements">Implements:</dt>
-    <dd class="implements"><ul>
-        
-            <li><a href="Store.html#resolve">Store#resolve</a></li>
-        
-    </ul></dd>
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/interfaces/Store.js#L69">lib/structures/interfaces/Store.js#L69</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Piece.html">Piece</a>
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="run"><span class="type-signature">&lt;async> </span>run(msg, mes, timer)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Runs all of our finalizers after a command is ran successfully.
-    </div>
     
 
     
@@ -1530,24 +151,20 @@
 
             
 
-            <td class="description last">The message that called the command</td>
+            <td class="description last">The message for the command</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>mes</code></td>
+                <td class="name"><code>usage</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="KlasaMessage.html">KlasaMessage</a>
-</span>
-|
-
-<span class="param-type">any
+<span class="param-type"><a href="CommandUsage.html">CommandUsage</a>
 </span>
 
 
@@ -1559,20 +176,20 @@
 
             
 
-            <td class="description last">The response of the command</td>
+            <td class="description last">The usage of the command</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>timer</code></td>
+                <td class="name"><code>options</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">StopWatch
+<span class="param-type">TextPromptOptions
 </span>
 
 
@@ -1584,7 +201,7 @@
 
             
 
-            <td class="description last">The timer run from start to queue of the command</td>
+            <td class="description last">The options for this CommandPrompt</td>
         </tr>
 
     
@@ -1603,7 +220,7 @@
 	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>0.0.1</li>
+			<li>0.5.0</li>
 		</ul>
 	</dd>
 	
@@ -1633,7 +250,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/FinalizerStore.js#L80">lib/structures/FinalizerStore.js#L80</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/CommandPrompt.js#L15">lib/usage/CommandPrompt.js#L15</a>	</dd>
 	
 
 	
@@ -1655,27 +272,131 @@
     
 
     
-    <h5>Returns:</h5>
+
     
-            
+</dd>
 
+    
+    </div>
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
+    
+        <h3 class="subsection-title">Extends</h3>
+
         
-<span class="param-type">void
+
+
+    <ul>
+        <li><a href="TextPrompt.html">TextPrompt</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Properties</h3>
+
+        <dl>
+            
+<hr>
+<dt class="name" id="args">
+
+    <h4 id="args"><span class="type-signature"></span>args<span class="type-signature"> :Array.&lt;string></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The string arguments derived from the usageDelim of the command
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Array.&lt;string>
 </span>
 
 
 
-    </dd>
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="TextPrompt.html#args">TextPrompt#args</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="TextPrompt.html#args">TextPrompt#args</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/TextPrompt.js#L67">lib/usage/TextPrompt.js#L67</a>	</dd>
+	
+
+	
+
+	
+
+	
 </dl>
 
-
-        
 
     
 </dd>
@@ -1683,8 +404,900 @@
         
             
 <hr>
+<dt class="name" id="client">
+
+    <h4 id="client"><span class="type-signature">&lt;readonly> </span>client<span class="type-signature"> :<a href="KlasaClient.html">KlasaClient</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The client this TextPrompt was created with
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="KlasaClient.html">KlasaClient</a>
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="TextPrompt.html#client">TextPrompt#client</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="TextPrompt.html#client">TextPrompt#client</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/TextPrompt.js#L25">lib/usage/TextPrompt.js#L25</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="flags">
+
+    <h4 id="flags"><span class="type-signature"></span>flags<span class="type-signature"> :Object</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The flag arguments resolved by this class
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Object
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="TextPrompt.html#flags">TextPrompt#flags</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="TextPrompt.html#flags">TextPrompt#flags</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/TextPrompt.js#L60">lib/usage/TextPrompt.js#L60</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="message">
+
+    <h4 id="message"><span class="type-signature"></span>message<span class="type-signature"> :<a href="KlasaMessage.html">KlasaMessage</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The message this prompt is for
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="KlasaMessage.html">KlasaMessage</a>
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="TextPrompt.html#message">TextPrompt#message</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="TextPrompt.html#message">TextPrompt#message</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/TextPrompt.js#L39">lib/usage/TextPrompt.js#L39</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="params">
+
+    <h4 id="params"><span class="type-signature"></span>params<span class="type-signature"> :Array.&lt;any></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The parameters resolved by this class
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Array.&lt;any>
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="TextPrompt.html#params">TextPrompt#params</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="TextPrompt.html#params">TextPrompt#params</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/TextPrompt.js#L74">lib/usage/TextPrompt.js#L74</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="promptLimit">
+
+    <h4 id="promptLimit"><span class="type-signature"></span>promptLimit<span class="type-signature"> :number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The number of re-prompts before this TextPrompt gives up
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="TextPrompt.html#promptLimit">TextPrompt#promptLimit</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="TextPrompt.html#promptLimit">TextPrompt#promptLimit</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/TextPrompt.js#L88">lib/usage/TextPrompt.js#L88</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="promptTime">
+
+    <h4 id="promptTime"><span class="type-signature"></span>promptTime<span class="type-signature"> :number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The time-limit for re-prompting
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="TextPrompt.html#promptTime">TextPrompt#promptTime</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="TextPrompt.html#promptTime">TextPrompt#promptTime</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/TextPrompt.js#L81">lib/usage/TextPrompt.js#L81</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="quotedStringSupport">
+
+    <h4 id="quotedStringSupport"><span class="type-signature"></span>quotedStringSupport<span class="type-signature"> :boolean</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Whether this prompt should respect quoted strings
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="TextPrompt.html#quotedStringSupport">TextPrompt#quotedStringSupport</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="TextPrompt.html#quotedStringSupport">TextPrompt#quotedStringSupport</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/TextPrompt.js#L95">lib/usage/TextPrompt.js#L95</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="reprompted">
+
+    <h4 id="reprompted"><span class="type-signature"></span>reprompted<span class="type-signature"> :boolean</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        If the command reprompted for missing args
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="TextPrompt.html#reprompted">TextPrompt#reprompted</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="TextPrompt.html#reprompted">TextPrompt#reprompted</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/TextPrompt.js#L53">lib/usage/TextPrompt.js#L53</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="usage">
+
+    <h4 id="usage"><span class="type-signature"></span>usage<span class="type-signature"> :<a href="ParsedUsage.html">ParsedUsage</a>|<a href="CommandUsage.html">CommandUsage</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The usage for this prompt
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="ParsedUsage.html">ParsedUsage</a>
+</span>
+|
+
+<span class="param-type"><a href="CommandUsage.html">CommandUsage</a>
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="TextPrompt.html#usage">TextPrompt#usage</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="TextPrompt.html#usage">TextPrompt#usage</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/TextPrompt.js#L46">lib/usage/TextPrompt.js#L46</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
 <dt>
-    <h4 class="name" id="set"><span class="type-signature"></span>set(finalizer)</h4>
+    <h4 class="name" id="run"><span class="type-signature"></span>run()</h4>
     
     
 </dt>
@@ -1692,7 +1305,7 @@
 
     
     <div class="description">
-        Sets up a finalizer in our store.
+        Runs the internal validation, and re-prompts according to the settings
     </div>
     
 
@@ -1702,57 +1315,6 @@
 
     
     
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>finalizer</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="Finalizer.html">Finalizer</a>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The finalizer object we are setting up</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
 
     
 <dl class="details">
@@ -1764,13 +1326,18 @@
 	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>0.0.1</li>
+			<li>0.5.0</li>
 		</ul>
 	</dd>
 	
 
 	
 
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="TextPrompt.html#run">TextPrompt#run</a>
+    </li></ul></dd>
     
 
     
@@ -1794,7 +1361,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/FinalizerStore.js#L98">lib/structures/FinalizerStore.js#L98</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/CommandPrompt.js#L34">lib/usage/CommandPrompt.js#L34</a>	</dd>
 	
 
 	
@@ -1819,6 +1386,10 @@
     <h5>Returns:</h5>
     
             
+<div class="param-desc">
+    The parameters resolved
+</div>
+
 
 
 <dl>
@@ -1827,7 +1398,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="Finalizer.html">Finalizer</a>
+<span class="param-type">Promise.&lt;Array.&lt;any>>
 </span>
 
 

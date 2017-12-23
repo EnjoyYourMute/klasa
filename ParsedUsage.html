@@ -34,7 +34,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="ArgResolver.html">ArgResolver</a></li><li><a href="Command.html">Command</a></li><li><a href="CommandStore.html">CommandStore</a></li><li><a href="Configuration.html">Configuration</a></li><li><a href="Event.html">Event</a></li><li><a href="EventStore.html">EventStore</a></li><li><a href="Extendable.html">Extendable</a></li><li><a href="ExtendableStore.html">ExtendableStore</a></li><li><a href="Finalizer.html">Finalizer</a></li><li><a href="FinalizerStore.html">FinalizerStore</a></li><li><a href="Gateway.html">Gateway</a></li><li><a href="GatewayDriver.html">GatewayDriver</a></li><li><a href="GatewayStorage.html">GatewayStorage</a></li><li><a href="Inhibitor.html">Inhibitor</a></li><li><a href="InhibitorStore.html">InhibitorStore</a></li><li><a href="KlasaClient.html">KlasaClient</a></li><li><a href="KlasaConsole.html">KlasaConsole</a></li><li><a href="KlasaGuild.html">KlasaGuild</a></li><li><a href="KlasaMessage.html">KlasaMessage</a></li><li><a href="KlasaUser.html">KlasaUser</a></li><li><a href="Language.html">Language</a></li><li><a href="LanguageStore.html">LanguageStore</a></li><li><a href="Monitor.html">Monitor</a></li><li><a href="MonitorStore.html">MonitorStore</a></li><li><a href="ParsedUsage.html">ParsedUsage</a></li><li><a href="PermissionLevels.html">PermissionLevels</a></li><li><a href="Piece.html">Piece</a></li><li><a href="Possible.html">Possible</a></li><li><a href="Provider.html">Provider</a></li><li><a href="ProviderStore.html">ProviderStore</a></li><li><a href="ReactionHandler.html">ReactionHandler</a></li><li><a href="Resolver.html">Resolver</a></li><li><a href="RichDisplay.html">RichDisplay</a></li><li><a href="RichMenu.html">RichMenu</a></li><li><a href="Schema.html">Schema</a></li><li><a href="SchemaFolder.html">SchemaFolder</a></li><li><a href="SchemaPiece.html">SchemaPiece</a></li><li><a href="SettingResolver.html">SettingResolver</a></li><li><a href="Stopwatch.html">Stopwatch</a></li><li><a href="Store.html">Store</a></li><li><a href="Tag.html">Tag</a></li><li><a href="Timestamp.html">Timestamp</a></li><li><a href="Util.html">Util</a></li>
+					<li><a href="ArgResolver.html">ArgResolver</a></li><li><a href="Command.html">Command</a></li><li><a href="CommandPrompt.html">CommandPrompt</a></li><li><a href="CommandStore.html">CommandStore</a></li><li><a href="CommandUsage.html">CommandUsage</a></li><li><a href="Configuration.html">Configuration</a></li><li><a href="Event.html">Event</a></li><li><a href="EventStore.html">EventStore</a></li><li><a href="Extendable.html">Extendable</a></li><li><a href="ExtendableStore.html">ExtendableStore</a></li><li><a href="Finalizer.html">Finalizer</a></li><li><a href="FinalizerStore.html">FinalizerStore</a></li><li><a href="Gateway.html">Gateway</a></li><li><a href="GatewayDriver.html">GatewayDriver</a></li><li><a href="GatewayStorage.html">GatewayStorage</a></li><li><a href="Inhibitor.html">Inhibitor</a></li><li><a href="InhibitorStore.html">InhibitorStore</a></li><li><a href="KlasaClient.html">KlasaClient</a></li><li><a href="KlasaConsole.html">KlasaConsole</a></li><li><a href="KlasaGuild.html">KlasaGuild</a></li><li><a href="KlasaMessage.html">KlasaMessage</a></li><li><a href="KlasaUser.html">KlasaUser</a></li><li><a href="Language.html">Language</a></li><li><a href="LanguageStore.html">LanguageStore</a></li><li><a href="Monitor.html">Monitor</a></li><li><a href="MonitorStore.html">MonitorStore</a></li><li><a href="ParsedUsage.html">ParsedUsage</a></li><li><a href="PermissionLevels.html">PermissionLevels</a></li><li><a href="Piece.html">Piece</a></li><li><a href="Possible.html">Possible</a></li><li><a href="Provider.html">Provider</a></li><li><a href="ProviderStore.html">ProviderStore</a></li><li><a href="ReactionHandler.html">ReactionHandler</a></li><li><a href="Resolver.html">Resolver</a></li><li><a href="RichDisplay.html">RichDisplay</a></li><li><a href="RichMenu.html">RichMenu</a></li><li><a href="Schema.html">Schema</a></li><li><a href="SchemaFolder.html">SchemaFolder</a></li><li><a href="SchemaPiece.html">SchemaPiece</a></li><li><a href="SettingResolver.html">SettingResolver</a></li><li><a href="Stopwatch.html">Stopwatch</a></li><li><a href="Store.html">Store</a></li><li><a href="Tag.html">Tag</a></li><li><a href="TextPrompt.html">TextPrompt</a></li><li><a href="Timestamp.html">Timestamp</a></li><li><a href="Util.html">Util</a></li>
 				</ul>
 			</li>
 			
@@ -94,7 +94,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="ParsedUsage"><span class="type-signature"></span>new ParsedUsage(client, command)</h4>
+    <h4 class="name" id="ParsedUsage"><span class="type-signature"></span>new ParsedUsage(client, usageString, usageDelim)</h4>
     
     
 </dt>
@@ -158,13 +158,13 @@
 
         <tr>
             
-                <td class="name"><code>command</code></td>
+                <td class="name"><code>usageString</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="Command.html">Command</a>
+<span class="param-type">string
 </span>
 
 
@@ -176,7 +176,32 @@
 
             
 
-            <td class="description last">The command this parsed usage is for</td>
+            <td class="description last">The raw usage string</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>usageDelim</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The deliminator for this usage</td>
         </tr>
 
     
@@ -225,7 +250,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L13">lib/usage/ParsedUsage.js#L13</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L15">lib/usage/ParsedUsage.js#L15</a>	</dd>
 	
 
 	
@@ -337,91 +362,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L14">lib/usage/ParsedUsage.js#L14</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="commands">
-
-    <h4 id="commands"><span class="type-signature"></span>commands<span class="type-signature"> :string</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The compiled string for all names/aliases in a usage string
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">string
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L35">lib/usage/ParsedUsage.js#L35</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L16">lib/usage/ParsedUsage.js#L16</a>	</dd>
 	
 
 	
@@ -505,175 +446,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L42">lib/usage/ParsedUsage.js#L42</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="names">
-
-    <h4 id="names"><span class="type-signature"></span>names<span class="type-signature"> :Array.&lt;string></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        All names and aliases for the command
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Array.&lt;string>
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L28">lib/usage/ParsedUsage.js#L28</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="nearlyFullUsage">
-
-    <h4 id="nearlyFullUsage"><span class="type-signature"></span>nearlyFullUsage<span class="type-signature"> :string</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The concatenated string of this.commands and this.deliminatedUsage
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">string
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L63">lib/usage/ParsedUsage.js#L63</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L30">lib/usage/ParsedUsage.js#L30</a>	</dd>
 	
 
 	
@@ -757,7 +530,91 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L56">lib/usage/ParsedUsage.js#L56</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L51">lib/usage/ParsedUsage.js#L51</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="usageDelim">
+
+    <h4 id="usageDelim"><span class="type-signature"></span>usageDelim<span class="type-signature"> :string</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The usage delim
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L44">lib/usage/ParsedUsage.js#L44</a>	</dd>
 	
 
 	
@@ -841,7 +698,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L49">lib/usage/ParsedUsage.js#L49</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L37">lib/usage/ParsedUsage.js#L37</a>	</dd>
 	
 
 	
@@ -865,7 +722,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="fullUsage"><span class="type-signature"></span>fullUsage(msg)</h4>
+    <h4 class="name" id="createPrompt"><span class="type-signature"></span>createPrompt(msg [, options])</h4>
     
     
 </dt>
@@ -873,7 +730,7 @@
 
     
     <div class="description">
-        Creates a full usage string including prefix and commands/aliases for documentation/help purposes
+        Creates a TextPrompt instance to collect and resolve arguments with.
     </div>
     
 
@@ -895,6 +752,8 @@
 
         <th>Type</th>
 
+        
+        <th>Argument</th>
         
 
         
@@ -923,10 +782,53 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">The message context for which to generate usage for</td>
+            <td class="description last">The message context from the prompt</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TextPromptOptions
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The options for the prompt</td>
         </tr>
 
     
@@ -945,7 +847,7 @@
 	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
 	<dd class="tag-since">
 		<ul class="dummy">
-			<li>0.0.1</li>
+			<li>0.5.0</li>
 		</ul>
 	</dd>
 	
@@ -975,7 +877,227 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L72">lib/usage/ParsedUsage.js#L72</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L61">lib/usage/ParsedUsage.js#L61</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="TextPrompt.html">TextPrompt</a>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="toJSON"><span class="type-signature"></span>toJSON()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Defines json stringify behavior of this class.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L70">lib/usage/ParsedUsage.js#L70</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;<a href="Tag.html">Tag</a>>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="toString"><span class="type-signature"></span>toString()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Defines to string behavior of this class.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/usage/ParsedUsage.js#L79">lib/usage/ParsedUsage.js#L79</a>	</dd>
 	
 
 	
