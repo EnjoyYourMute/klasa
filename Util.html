@@ -405,7 +405,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L83">lib/util/util.js#L83</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L95">lib/util/util.js#L95</a>	</dd>
 	
 
 	
@@ -937,7 +937,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L235">lib/util/util.js#L235</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L327">lib/util/util.js#L327</a>	</dd>
 	
 
 	
@@ -971,6 +971,755 @@
     <dd>
         
 <span class="param-type">Promise.&lt;{stdout: string, stderr: string}>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".getDeepTypeMap"><span class="type-signature">&lt;static> </span>getDeepTypeMap(input [, basic])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get the deep type name that defines a Map, WeakMap, or a discord.js' Collection.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Map
+</span>
+|
+
+<span class="param-type">WeakMap
+</span>
+|
+
+<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/Collection">external:Collection</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The value to get the deep type from</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>basic</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The basic type</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L202">lib/util/util.js#L202</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".getDeepTypeName"><span class="type-signature">&lt;static> </span>getDeepTypeName(input)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get the deep type name that defines the input.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value to get the deep type from</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L175">lib/util/util.js#L175</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".getDeepTypeProxy"><span class="type-signature">&lt;static> </span>getDeepTypeProxy(input)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get the deep type name that defines a Proxy.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Proxy
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value to get the deep type from</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L243">lib/util/util.js#L243</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".getDeepTypeSetOrArray"><span class="type-signature">&lt;static> </span>getDeepTypeSetOrArray(input [, basic])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get the deep type name that defines an Array, Set, or a WeakSet.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array
+</span>
+|
+
+<span class="param-type">Set
+</span>
+|
+
+<span class="param-type">WeakSet
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The value to get the deep type from</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>basic</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The basic type</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L225">lib/util/util.js#L225</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string
 </span>
 
 
@@ -1098,7 +1847,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L148">lib/util/util.js#L148</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L160">lib/util/util.js#L160</a>	</dd>
 	
 
 	
@@ -1259,7 +2008,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L105">lib/util/util.js#L105</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L117">lib/util/util.js#L117</a>	</dd>
 	
 
 	
@@ -1420,7 +2169,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L95">lib/util/util.js#L95</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L107">lib/util/util.js#L107</a>	</dd>
 	
 
 	
@@ -1581,7 +2330,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L128">lib/util/util.js#L128</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L140">lib/util/util.js#L140</a>	</dd>
 	
 
 	
@@ -1742,7 +2491,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L118">lib/util/util.js#L118</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L130">lib/util/util.js#L130</a>	</dd>
 	
 
 	
@@ -1903,7 +2652,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L138">lib/util/util.js#L138</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L150">lib/util/util.js#L150</a>	</dd>
 	
 
 	
@@ -2089,7 +2838,193 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L178">lib/util/util.js#L178</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L270">lib/util/util.js#L270</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">*
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".mergeObjects"><span class="type-signature">&lt;static> </span>mergeObjects(objTarget, objSource)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Merges two objects
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>objTarget</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The object to be merged</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>objSource</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The object to merge</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L83">lib/util/util.js#L83</a>	</dd>
 	
 
 	
@@ -2456,7 +3391,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L246">lib/util/util.js#L246</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L338">lib/util/util.js#L338</a>	</dd>
 	
 
 	
@@ -2782,7 +3717,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L163">lib/util/util.js#L163</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L255">lib/util/util.js#L255</a>	</dd>
 	
 
 	
@@ -3278,7 +4213,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L212">lib/util/util.js#L212</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/util/util.js#L304">lib/util/util.js#L304</a>	</dd>
 	
 
 	
