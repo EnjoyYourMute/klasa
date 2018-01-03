@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Klasa Tutorial: Using RichMenu for Paginated Menus</title>
+	<title>Klasa Tutorial: Creating Custom Arguments</title>
 	<link rel="shortcut icon" href="img/favicon.ico">
 
 	<!--[if lt IE 9]>
@@ -74,72 +74,116 @@
 			<section class="tutorial-section">
 
 <header>
-    <h1>Using RichMenu for Paginated Menus</h1>
+    <h1>Creating Custom Arguments</h1>
 </header>
 
 <article>
-    <p>While <a href="tutorial-RichDisplay_.html">Using RichDisplay for Paginated Embeds</a> allows you to create fully configurable paginated embeds, <a href="RichMenu.html"><code>RichMenu</code></a> allows you to define menus using a similar interface.</p>
-<p>Unlike <a href="tutorial-RichDisplay_.html">Using RichDisplay for Paginated Embeds</a>, <a href="RichMenu.html"><code>RichMenu</code></a> manages a page's content and layout automatically and instead of calling <code>RichDisplay.addPage</code> that allows to customize the template (if provided), the user is presented with the <code>RichMenu.addOption</code> method, which only requires a <code>name</code> and a <code>body</code> and handles the organization of the options automatically.</p>
-<p>Like <a href="tutorial-RichDisplay_.html">Using RichDisplay for Paginated Embeds</a> there is the option to define a template <a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed"><code>MessageEmbed</code></a> in its constructor, but it will be applied automatically to each page of the menu.</p>
-<p>An example of how <a href="RichMenu.html"><code>RichMenu</code></a> could be used is in a <code>help</code>-like command, this is a simple demo of how it would work:</p>
-<pre class="prettyprint source lang-javascript"><code>const menu = new RichMenu(new this.client.methods.Embed()
-	.setColor(0x673AB7)
-	.setAuthor(this.client.user.username, this.client.user.avatarURL())
-	.setTitle('Advanced Commands Help:')
-	.setDescription('Use the arrow reactions to scroll between pages.\nUse number reactions to select an option.')
-);
+    <p>One of the best features from Klasa's (and Komada's) usage is that you can extend its functionality by adding new types, to achieve that, we will use our <a href="Extendable.html"><code>Extendable</code></a>s. We will create an empty extendable, called <code>emoji.js</code>, and aim it to Klasa:</p>
+<blockquote>
+<p><strong>Note</strong>: The following argument type type is already included in klasa, and is just an explanation of how it works.</p>
+</blockquote>
+<pre class="prettyprint source lang-javascript"><code>const { Extendable } = require('klasa');
 
-for (const command of this.client.commands.values()) {
-	menu.addOption(command.name, command.description);
-}
+module.exports = class extends Extendable {
 
-const collector = await menu.run(await msg.send('Loading commands...'));
+	constructor(...args) {
+		super(...args, ['ArgResolver'], { klasa: true });
+	}
 
-const choice = await collector.selection;
-if (choice === null) {
-	return collector.message.delete();
-}
+	extend() {
+		// `this` reffers to the parent class, and not this one. You cannot use super
+	}
 
-const command = this.client.commands.get(menu.options[choice].name);
-const info = new this.client.methods.Embed()
-	.setTitle(`Command \`${msg.guild.configs.prefix}${command.name}\``)
-	.setDescription(typeof command.description == 'function' ? command.description(msg) : command.description)
-	.addField('Usage:', command.usageString);
-
-if (command.extendedHelp && command.extendedHelp != '') {
-	info.addField('Help:', typeof command.extendedHelp == 'function' ? command.extendedHelp(msg) : command.extendedHelp);
-}
-
-return collector.message.edit(info);
+};
 </code></pre>
 <blockquote>
-<p>The code is designed to be placed in a command, inside the <code>async run(msg)</code> method but the menu or its options can easily be initialized within the constructor method or the <code>Command.init</code> method of the command.</p>
+<p><strong>Note</strong>: that the class we want to extend to add new types to usage is <strong><a href="ArgResolver.html"><code>ArgResolver</code></a></strong>, which belongs to <code>klasa</code>, so we put only <code>'ArgResolver'</code> to the classes we want to extend, and select <code>klasa: true</code> in the <code>ExtendableOptions</code>.</p>
 </blockquote>
-<h2>Code Analysis</h2>
-<p>The creation of the <a href="RichMenu.html"><code>RichMenu</code></a> is the same as the one displayed in <a href="tutorial-RichDisplay_.html">Using RichDisplay for Paginated Embeds</a>, like most of the code and personalization options. Please refer to the <a href="tutorial-RichDisplay_.html">Using RichDisplay for Paginated Embeds</a> tutorial.</p>
-<p>We begin by adding the options, which will be listed in the same order we defined.</p>
-<pre class="prettyprint source lang-javascript"><code>for (const command of /* ... */) {
-	menu.addOption(command.name, command.description);
-}
-</code></pre>
-<p>After listing all the options we can call <code>RichMenu.run</code> on our menu to render it.
-We will store the resulting <a href="ReactionHandler.html"><code>ReactionHandler</code></a> to later access the selected option.</p>
-<pre class="prettyprint source lang-javascript"><code>const collector = await menu.run(await msg.send('Loading Commands...'));
-</code></pre>
-<p>We will also need to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await"><code>await</code></a> for the user to select an option before continuing:</p>
-<pre class="prettyprint source lang-javascript"><code>const choice = await collector.selection;
-</code></pre>
-<p>After obtaining the index of the selected option we can access the option's name through our menu:</p>
-<pre class="prettyprint source lang-javascript"><code>const command = /* ... */(menu.options[choice].name);
-</code></pre>
-<p>Finally, we show the user the selected command by editing the original <a href="https://discord.js.org/#/docs/main/master/class/MessageEmbed"><code>MessageEmbed</code></a>:</p>
-<pre class="prettyprint source lang-javascript"><code>const info = new this.client.methods.Embed()
-	/* ... */;
+<p>Each method in ArgResolver takes 5 parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>arg</strong></td>
+<td>string</td>
+<td>The parameter given to parse</td>
+</tr>
+<tr>
+<td><strong>currentUsage</strong></td>
+<td>Object</td>
+<td>The current usage</td>
+</tr>
+<tr>
+<td><strong>possible</strong></td>
+<td>number</td>
+<td>The possible's index</td>
+</tr>
+<tr>
+<td><strong>repeat</strong></td>
+<td>boolean</td>
+<td>If it is a looping/repeating arg</td>
+</tr>
+<tr>
+<td><strong>msg</strong></td>
+<td><a href="KlasaMessage.html"><code>KlasaMessage</code></a></td>
+<td>The message that triggered the command</td>
+</tr>
+</tbody>
+</table>
+<pre class="prettyprint source lang-javascript"><code>const { Extendable } = require('klasa');
+const REGEX_EMOJI = /^(?:&lt;a?:\w{2,32}:)?(\d{17,19})>?$/;
 
-return collector.message.edit(info);
+module.exports = class extends Extendable {
+
+	constructor(...args) {
+		super(...args, ['ArgResolver'], { klasa: true });
+	}
+
+	async extend(arg, currentUsage, possible, repeat, msg) {
+		const results = REGEX_EMOJI.exec(arg);
+		const emoji = results ? this.client.emojis.get(results[1]) : null;
+		if (emoji) return emoji;
+		if (currentUsage.type === 'optional' && !repeat) return null;
+		throw (msg ? msg.language : this.client.languages.default).get('RESOLVER_INVALID_EMOJI', currentUsage.possibles[possible].name);
+	}
+
+};
 </code></pre>
-<h2>Personalization</h2>
-<p>Personalization is the same offered by <a href="tutorial-RichDisplay_.html">Using RichDisplay for Paginated Embeds</a>. You can define an Info Page through <code>RichDisplay.setInfoPage</code> and you can define custom behavior handling by defining a function in the <code>filter</code> argument of <a href="RichMenu.html#.RichMenuRunOptions"><code>RichMenu.RichMenuRunOptions</code></a></p>
+<blockquote>
+<p><strong>Note</strong>: All methods from ArgResolver must return a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>.</p>
+</blockquote>
+<p>How does the new extendable or custom argument work?</p>
+<ol>
+<li>Let's consider arg is <code>&lt;:klasa:354702113147846666&gt;</code>. The result of <code>exec</code>uting <code>REGEX_EMOJI</code> on that string gives an array-like object: <code>['&lt;:klasa:354702113147846666&gt;', '354702113147846666', index: 0, input: '&lt;:klasa:354702113147846666&gt;']</code>.</li>
+<li>There are cases the argument does not match, in that case, <code>results</code> would be <code>null</code>. So we verify its existence and get the first grouping match: <code>(\d{17,19})</code>, which gets the <strong>id</strong> of the emoji, and as we see in the result, it is in the second index: <code>'354702113147846666'</code>, and we get the emoji with said id.</li>
+<li>If <code>results</code> was null, <code>emoji</code> would be <code>null</code> too due to the ternary condition, but there is also the possibility of emoji being undefined: when the client does not have the Emoji instance cached or is in a guild the bot is not in. The case is, <strong>if the emoji is valid and found, we should return it</strong>.</li>
+<li>If the emoji was valid and found, we do not run the two next steps, 4 and 5. The fourth line of code inside <code>extend</code> handles optional arguments: if it's optional and it's not a repeating tag, it should not throw, but return null.</li>
+<li>Finally, the argument was required and/or looping/repeating, so we should throw an error. That error must be a string and you can use i18n to have localized errors.</li>
+</ol>
+<p>And now, you can use this type in a command! For example, the following:</p>
+<pre class="prettyprint source lang-javascript"><code>const { Command } = require('klasa');
+
+module.exports = class extends Command {
+
+	constructor(...args) {
+		super(...args, {
+			description: 'Get the name of an emoji.',
+			usage: '&lt;emoji:emoji>'
+		});
+	}
+
+	run(msg, [emoji]) {
+		return msg.sendMessage(`The name of the emoji ${emoji} is: ${emoji.name}`);
+	}
+
+};
+</code></pre>
 </article>
 
 
