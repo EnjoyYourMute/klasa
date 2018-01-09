@@ -84,14 +84,14 @@
 <p>However, as Klasa works on a <a href="https://en.wikipedia.org/wiki/NoSQL">NoSQL</a> environment, however, SQL parsing has been improved to reduce the NoSQL middleware processing and be able to match it in performance's speed. SQL providers also need a special set of methods and properties to make the provider <code>SQL</code> compatible.</p>
 <h2>Change the <em>provider's engine</em>.</h2>
 <p>For example, let's say I have downloaded the <em>levelup</em> provider and I want to work with it, then we go to your main script file (<code>app.js</code>, <code>bot.js</code>..., wherever you declare the new Klasa.Client), and write the following code:</p>
-<pre class="prettyprint source lang-javascript"><code>provider: { engine: 'levelup' }
+<pre class="prettyprint source lang-javascript"><code>{ providers: { default: 'levelup' } }
 </code></pre>
 <p>Your Klasa's configuration will look something like this:</p>
 <pre class="prettyprint source lang-javascript"><code>const client = new Klasa.Client({
   ownerID: '',
   prefix: 'k!',
   clientOptions: {},
-  provider: { engine: '' },
+  providers: { default: '' },
 });
 
 client.login('A_BEAUTIFUL_TOKEN_AINT_IT?');
