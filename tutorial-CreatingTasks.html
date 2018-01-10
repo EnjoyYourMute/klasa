@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Klasa External: StringResolvable</title>
+	<title>Klasa Tutorial: Creating Tasks</title>
 	<link rel="shortcut icon" href="img/favicon.ico">
 
 	<!--[if lt IE 9]>
@@ -68,117 +68,111 @@
 <div class="row">
 
 	
-	<div class="col-md-8">
+	<div class="col-md-12">
 	
 		<div id="main">
-			
-
-	<h1 class="page-title">External: StringResolvable</h1>
-<section>
+			<section class="tutorial-section">
 
 <header>
-    
-        <h2>
-        StringResolvable
-        </h2>
-        
-    
+    <h1>Creating Tasks</h1>
 </header>
 
-
 <article>
-    <div class="container-overview">
-    
-        
+    <p>New tasks are created in the <code>./tasks/</code> folder, they are simple pieces that run from <a href="Schedule.html"><code>Schedule</code></a> after a <a href="ScheduledTask.html"><code>ScheduledTask</code></a> end-of-life or recurrence time. The <code>data</code> field, also called <em>metadata</em>, is an option that can contain anything, even an object. Note that this gets <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify"><code>JSON.stringify()</code>'ed</a> in SQL so it gets parsed back on start-up.</p>
+<p>Their structure is the following:</p>
+<pre class="prettyprint source lang-javascript"><code>const { Task } = require('klasa');
 
-        
-<dl class="details">
-    
+module.exports = class extends Task {
 
-	
+	constructor(...args) {
+		super(...args, { name: 'yourTaskName', enabled: true });
+	}
 
-	
+	async run(metadata) {
+		// The code that will receive the metadata from the task
+	}
 
-	
+	async init() {
+		// You can optionally define this method which will be run when the bot starts (after login, so discord data is available via this.client)
+	}
 
-    
+}
+</code></pre>
+<p>Where <code>metadata</code> is what you passed to <code>ScheduledTaskOptions.data</code>, <code>null</code> if not passed.</p>
+<h2>Creating the ScheduledTask</h2>
+<p>After you have created your <a href="Task.html"><code>Task</code></a> piece, you'll be able to create the first scheduled tasks for it:</p>
+<pre class="prettyprint source lang-javascript"><code>this.client.schedule.create('reminder', Date.now() + 1000 * 60, {
+	data: {
+		// This is the metadata. In one minute after the creation of this scheduled
+		// task, Schedule will call your new task with this object.
+		user: msg.author.id,
+		text: 'This is a reminder',
+		channel: msg.channel.id
+	}
+});
+</code></pre>
+<blockquote>
+<p><strong>NOTE</strong>: What the data field stores is up to the developer, it serves the purpose of storing tiny metadata for later usage in a Task piece. You can omit this if you don't want to pass specific data (such as a <code>backup</code> task), it can be anything that can be <code>JSON.stringify()</code>ed and <code>JSON.parse()</code>ed: <code>null</code>, <code>number</code>, <code>string</code>, <code>boolean</code>, <code>array</code>, (literal) <code>object</code>...).</p>
+</blockquote>
+<p>Source code:</p>
+<pre class="prettyprint source lang-javascript"><code>const { Task } = require('klasa');
 
-    
+module.exports = class extends Task {
 
-    
+	async run({ channel, user, text }) {
+		const _channel = this.client.channels.get(channel);
+		return _channel.send(`&lt;@${user}> You wanted me to remind you: ${text}`);
+	}
 
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/index.js#L144">index.js#L144</a>	</dd>
-	
-
-	
-
-	
-	<dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
-	<dd class="tag-see">
-		<ul>
-			<li><a href="https://discord.js.org/#/docs/main/master/typedef/StringResolvable">https://discord.js.org/#/docs/main/master/typedef/StringResolvable</a></li>
-			</ul>
-	</dd>
-	
-
-	
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+};
+</code></pre>
+<p>Check the source of the piece above <a href="https://github.com/dirigeants/klasa-pieces/blob/9ba1c48b08ad2b1ea55aeadc6d7e8e067346c0a2/tasks/reminder.js">here</a>.</p>
+<h2>Configuration</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Default</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><code>theFileName</code></td>
+<td>string</td>
+<td>The name of the task</td>
+</tr>
+<tr>
+<td><strong>enabled</strong></td>
+<td><code>true</code></td>
+<td>boolean</td>
+<td>Whether the task is enabled or not</td>
+</tr>
+</tbody>
+</table>
+<h2>Further Reading:</h2>
+<ul>
+<li><a href="tutorial-CreatingCommands.html">Creating Commands</a></li>
+<li><a href="tutorial-CreatingExtendables.html">Creating Extendables</a></li>
+<li><a href="tutorial-CreatingFinalizers.html">Creating Finalizers</a></li>
+<li><a href="tutorial-CreatingInhibitors.html">Creating Inhibitors</a></li>
+<li><a href="tutorial-CreatingLanguages.html">Creating Languages</a></li>
+<li><a href="tutorial-CreatingMonitors.html">Creating Monitors</a></li>
+<li><a href="tutorial-CreatingProviders.html">Creating Providers</a></li>
+</ul>
 </article>
 
+
+
 </section>
-
-
-
 
 		</div>
 	</div>
 
 	<div class="clearfix"></div>
 
-	
-		<div class="col-md-3">
-			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
-		</div>
 	
 
 </div>

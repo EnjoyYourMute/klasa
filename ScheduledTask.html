@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Klasa Class: SchemaPiece</title>
+	<title>Klasa Class: ScheduledTask</title>
 	<link rel="shortcut icon" href="img/favicon.ico">
 
 	<!--[if lt IE 9]>
@@ -73,16 +73,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: SchemaPiece</h1>
+	<h1 class="page-title">Class: ScheduledTask</h1>
 <section>
 
 <header>
     
         <h2>
-        SchemaPiece
+        ScheduledTask
         </h2>
         
-            <div class="class-description">The SchemaPiece class that contains the data for a key and several helpers.</div>
+            <div class="class-description">The structure for future tasks to be run</div>
         
     
 </header>
@@ -94,12 +94,16 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="SchemaPiece"><span class="type-signature"></span>new SchemaPiece(client, gateway, options, parent, key)</h4>
+    <h4 class="name" id="ScheduledTask"><span class="type-signature"></span>new ScheduledTask(client, taskName, time [, options])</h4>
     
     
 </dt>
 <dd>
 
+    
+    <div class="description">
+        Initializes a new ScheduledTask
+    </div>
     
 
     
@@ -121,7 +125,11 @@
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -148,92 +156,29 @@
             </td>
 
             
-
-            
-
-            <td class="description last">The client which initialized this instance</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>gateway</code></td>
-            
-
-            <td class="type">
-            
+                <td class="attributes">
                 
-<span class="param-type"><a href="Gateway.html">Gateway</a>
-</span>
 
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The Gateway that manages this schema instance</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>options</code></td>
-            
-
-            <td class="type">
-            
                 
-<span class="param-type">AddOptions
-</span>
 
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The object containing the properties for this schema instance</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>parent</code></td>
-            
-
-            <td class="type">
-            
                 
-<span class="param-type"><a href="SchemaFolder.html">SchemaFolder</a>
-</span>
-
-
-
-            
-            </td>
-
+                </td>
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
-            <td class="description last">The parent which holds this instance</td>
+            <td class="description last">The client that initialized this instance</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>key</code></td>
+                <td class="name"><code>taskName</code></td>
             
 
             <td class="type">
@@ -248,10 +193,108 @@
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last">The name of the key</td>
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">The name of the task this ScheduledTask is for</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>time</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date
+</span>
+|
+
+<span class="param-type">number
+</span>
+|
+
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">The time or Cron pattern</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ScheduledTaskOptions
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    {}
+                
+                </td>
+            
+
+            <td class="description last">The options for this ScheduledTask instance</td>
         </tr>
 
     
@@ -300,7 +343,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L40">lib/settings/SchemaPiece.js#L40</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/schedule/ScheduledTask.js#L41">lib/schedule/ScheduledTask.js#L41</a>	</dd>
 	
 
 	
@@ -345,17 +388,13 @@
         <dl>
             
 <hr>
-<dt class="name" id="array">
+<dt class="name" id="client">
 
-    <h4 id="array"><span class="type-signature"></span>array<span class="type-signature"> :boolean</span></h4>
+    <h4 id="client"><span class="type-signature">&lt;readonly> </span>client<span class="type-signature"> :<a href="KlasaClient.html">KlasaClient</a></span></h4>
 
     
 </dt>
 <dd>
-    
-    <div class="description">
-        Whether this key should store multiple or a single value.
-    </div>
     
 
     
@@ -363,7 +402,7 @@
         <ul>
             <li>
                 
-<span class="param-type">boolean
+<span class="param-type"><a href="KlasaClient.html">KlasaClient</a>
 </span>
 
 
@@ -412,7 +451,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L51">lib/settings/SchemaPiece.js#L51</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/schedule/ScheduledTask.js#L44">lib/schedule/ScheduledTask.js#L44</a>	</dd>
 	
 
 	
@@ -429,101 +468,13 @@
         
             
 <hr>
-<dt class="name" id="configurable">
+<dt class="name" id="data">
 
-    <h4 id="configurable"><span class="type-signature"></span>configurable<span class="type-signature"> :boolean</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Whether this key should be configureable by the config command. When type is any, this key defaults to false.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L91">lib/settings/SchemaPiece.js#L91</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="default">
-
-    <h4 id="default"><span class="type-signature"></span>default<span class="type-signature"> :*</span></h4>
+    <h4 id="data"><span class="type-signature"></span>data<span class="type-signature"> :*</span></h4>
 
     
 </dt>
 <dd>
-    
-    <div class="description">
-        What this key should provide by default.
-    </div>
     
 
     
@@ -580,7 +531,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L59">lib/settings/SchemaPiece.js#L59</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/schedule/ScheduledTask.js#L88">lib/schedule/ScheduledTask.js#L88</a>	</dd>
 	
 
 	
@@ -597,269 +548,13 @@
         
             
 <hr>
-<dt class="name" id="max">
+<dt class="name" id="id">
 
-    <h4 id="max"><span class="type-signature">&lt;nullable> </span>max<span class="type-signature"> :number</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The maximum value for this key.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">number
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L75">lib/settings/SchemaPiece.js#L75</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="min">
-
-    <h4 id="min"><span class="type-signature">&lt;nullable> </span>min<span class="type-signature"> :number</span></h4>
+    <h4 id="id"><span class="type-signature"></span>id<span class="type-signature"> :string</span></h4>
 
     
 </dt>
 <dd>
-    
-    <div class="description">
-        The minimum value for this key.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">number
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L67">lib/settings/SchemaPiece.js#L67</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="sql">
-
-    <h4 id="sql"><span class="type-signature"></span>sql<span class="type-signature"> :Array.&lt;string></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        A tuple of strings containing the path and the datatype.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Array.&lt;string>
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L83">lib/settings/SchemaPiece.js#L83</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="type">
-
-    <h4 id="type"><span class="type-signature"></span>type<span class="type-signature"> :string</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The type of this key.
-    </div>
     
 
     
@@ -916,7 +611,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L43">lib/settings/SchemaPiece.js#L43</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/schedule/ScheduledTask.js#L82">lib/schedule/ScheduledTask.js#L82</a>	</dd>
 	
 
 	
@@ -930,84 +625,30 @@
     
 </dd>
 
-        </dl>
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        <dl>
+        
             
 <hr>
-<dt>
-    <h4 class="name" id="modify"><span class="type-signature">&lt;async> </span>modify(options)</h4>
-    
+<dt class="name" id="recurring">
+
+    <h4 id="recurring"><span class="type-signature">&lt;nullable> </span>recurring<span class="type-signature"> :<a href="Cron.html">Cron</a></span></h4>
+
     
 </dt>
 <dd>
-
-    
-    <div class="description">
-        Modify this SchemaPiece's properties.
-    </div>
     
 
     
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>options</code></td>
-            
-
-            <td class="type">
-            
+        <h5>Type:</h5>
+        <ul>
+            <li>
                 
-<span class="param-type">ModifyOptions
+<span class="param-type"><a href="Cron.html">Cron</a>
 </span>
 
 
 
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The new options</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
+            </li>
+        </ul>
     
 
     
@@ -1050,7 +691,440 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L152">lib/settings/SchemaPiece.js#L152</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/schedule/ScheduledTask.js#L70">lib/schedule/ScheduledTask.js#L70</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="store">
+
+    <h4 id="store"><span class="type-signature">&lt;readonly> </span>store<span class="type-signature"> :<a href="Schedule.html">Schedule</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="Schedule.html">Schedule</a>
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/schedule/ScheduledTask.js#L52">lib/schedule/ScheduledTask.js#L52</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="task">
+
+    <h4 id="task"><span class="type-signature"></span>task<span class="type-signature"> :<a href="Task.html">Task</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="Task.html">Task</a>
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/schedule/ScheduledTask.js#L64">lib/schedule/ScheduledTask.js#L64</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="time">
+
+    <h4 id="time"><span class="type-signature">&lt;nullable> </span>time<span class="type-signature"> :Date</span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Date
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/schedule/ScheduledTask.js#L76">lib/schedule/ScheduledTask.js#L76</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="delete"><span class="type-signature"></span>delete()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Delete the task
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/schedule/ScheduledTask.js#L138">lib/schedule/ScheduledTask.js#L138</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;<a href="Schedule.html">Schedule</a>>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="run"><span class="type-signature">&lt;async> </span>run()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Run the current task and bump it if needed
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/schedule/ScheduledTask.js#L98">lib/schedule/ScheduledTask.js#L98</a>	</dd>
 	
 
 	
@@ -1101,353 +1175,6 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="parse"><span class="type-signature"></span>parse(value, guild)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Parse a value in this key's resolver.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The value to parse</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>guild</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="KlasaGuild.html">KlasaGuild</a>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">A Guild instance required for the resolver to work</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L109">lib/settings/SchemaPiece.js#L109</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;*>
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="resolveString"><span class="type-signature"></span>resolveString(msg)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Resolve a string.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>msg</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="KlasaMessage.html">KlasaMessage</a>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The Message to use</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L119">lib/settings/SchemaPiece.js#L119</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
     <h4 class="name" id="toJSON"><span class="type-signature"></span>toJSON()</h4>
     
     
@@ -1456,7 +1183,7 @@
 
     
     <div class="description">
-        Get this key's raw data in JSON.
+        Override for JSON.stringify
     </div>
     
 
@@ -1507,7 +1234,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L312">lib/settings/SchemaPiece.js#L312</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/schedule/ScheduledTask.js#L147">lib/schedule/ScheduledTask.js#L147</a>	</dd>
 	
 
 	
@@ -1540,7 +1267,7 @@
     </dt>
     <dd>
         
-<span class="param-type">SchemaPieceJSON
+<span class="param-type">ScheduledTaskJSON
 </span>
 
 
@@ -1558,7 +1285,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="toString"><span class="type-signature"></span>toString()</h4>
+    <h4 class="name" id="update"><span class="type-signature">&lt;async> </span>update(options)</h4>
     
     
 </dt>
@@ -1566,7 +1293,7 @@
 
     
     <div class="description">
-        Stringify a value or the instance itself.
+        Update the task
     </div>
     
 
@@ -1575,6 +1302,57 @@
     
 
     
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ScheduledTaskUpdateOptions
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The options to update</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
     
 
     
@@ -1617,7 +1395,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L329">lib/settings/SchemaPiece.js#L329</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/schedule/ScheduledTask.js#L115">lib/schedule/ScheduledTask.js#L115</a>	</dd>
 	
 
 	
@@ -1650,7 +1428,7 @@
     </dt>
     <dd>
         
-<span class="param-type">string
+<span class="param-type">Promise.&lt;this>
 </span>
 
 
@@ -1673,9 +1451,9 @@
         <dl>
                 
 <hr>
-<dt class="name" id=".ModifyOptions">
+<dt class="name" id=".ScheduledTaskJSON">
 
-    <h4 id=".ModifyOptions">ModifyOptions</h4>
+    <h4 id=".ScheduledTaskJSON">ScheduledTaskJSON</h4>
 
     
 </dt>
@@ -1728,13 +1506,13 @@
 
         <tr>
             
-                <td class="name"><code>default</code></td>
+                <td class="name"><code>id</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">*
+<span class="param-type">string
 </span>
 
 
@@ -1745,8 +1523,6 @@
             
                 <td class="attributes">
                 
-                    &lt;optional><br>
-                
 
                 
                 </td>
@@ -1754,20 +1530,20 @@
 
             
 
-            <td class="description last">The new default value</td>
+            <td class="description last"></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>min</code></td>
+                <td class="name"><code>taskName</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type">string
 </span>
 
 
@@ -1778,8 +1554,6 @@
             
                 <td class="attributes">
                 
-                    &lt;optional><br>
-                
 
                 
                 </td>
@@ -1787,14 +1561,14 @@
 
             
 
-            <td class="description last">The new minimum range value</td>
+            <td class="description last"></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>max</code></td>
+                <td class="name"><code>time</code></td>
             
 
             <td class="type">
@@ -1811,8 +1585,6 @@
             
                 <td class="attributes">
                 
-                    &lt;optional><br>
-                
 
                 
                 </td>
@@ -1820,47 +1592,14 @@
 
             
 
-            <td class="description last">The new maximum range value</td>
+            <td class="description last"></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>configurable</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The new configurable value</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>sql</code></td>
+                <td class="name"><code>repeat</code></td>
             
 
             <td class="type">
@@ -1886,7 +1625,40 @@
 
             
 
-            <td class="description last">The new sql datatype</td>
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
         </tr>
 
     
@@ -1925,7 +1697,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L22">lib/settings/SchemaPiece.js#L22</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/schedule/ScheduledTask.js#L23">lib/schedule/ScheduledTask.js#L23</a>	</dd>
 	
 
 	
@@ -1942,9 +1714,9 @@
             
                 
 <hr>
-<dt class="name" id=".SchemaPieceJSON">
+<dt class="name" id=".ScheduledTaskOptions">
 
-    <h4 id=".SchemaPieceJSON">SchemaPieceJSON</h4>
+    <h4 id=".ScheduledTaskOptions">ScheduledTaskOptions</h4>
 
     
 </dt>
@@ -1983,6 +1755,8 @@
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
         
 
@@ -1995,7 +1769,7 @@
 
         <tr>
             
-                <td class="name"><code>type</code></td>
+                <td class="name"><code>id</code></td>
             
 
             <td class="type">
@@ -2010,17 +1784,25 @@
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">The type for the key</td>
+            <td class="description last"></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>default</code></td>
+                <td class="name"><code>data</code></td>
             
 
             <td class="type">
@@ -2035,135 +1817,18 @@
             </td>
 
             
-
-            
-
-            <td class="description last">The default value for the key</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>min</code></td>
-            
-
-            <td class="type">
-            
+                <td class="attributes">
                 
-<span class="param-type">number
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The min value for the key (String.length for String, value for number)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>max</code></td>
-            
-
-            <td class="type">
-            
+                    &lt;optional><br>
                 
-<span class="param-type">number
-</span>
 
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The max value for the key (String.length for String, value for number)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>sql</code></td>
-            
-
-            <td class="type">
-            
                 
-<span class="param-type">Array.&lt;string>
-</span>
-
-
-
-            
-            </td>
-
+                </td>
             
 
             
 
-            <td class="description last">A tuple containing the name of the column and its data type</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>array</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Whether the key should be stored as Array or not</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>configurable</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Whether the key should be configurable by the config command or not</td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -2202,7 +1867,210 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L10">lib/settings/SchemaPiece.js#L10</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/schedule/ScheduledTask.js#L8">lib/schedule/ScheduledTask.js#L8</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+            
+                
+<hr>
+<dt class="name" id=".ScheduledTaskUpdateOptions">
+
+    <h4 id=".ScheduledTaskUpdateOptions">ScheduledTaskUpdateOptions</h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Object
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>repeat</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>time</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/schedule/ScheduledTask.js#L15">lib/schedule/ScheduledTask.js#L15</a>	</dd>
 	
 
 	

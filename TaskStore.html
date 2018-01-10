@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Klasa Class: SchemaPiece</title>
+	<title>Klasa Class: TaskStore</title>
 	<link rel="shortcut icon" href="img/favicon.ico">
 
 	<!--[if lt IE 9]>
@@ -73,16 +73,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: SchemaPiece</h1>
+	<h1 class="page-title">Class: TaskStore</h1>
 <section>
 
 <header>
     
         <h2>
-        SchemaPiece
+        TaskStore
         </h2>
         
-            <div class="class-description">The SchemaPiece class that contains the data for a key and several helpers.</div>
+            <div class="class-description">Stores all task pieces for use in Klasa</div>
         
     
 </header>
@@ -94,12 +94,16 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="SchemaPiece"><span class="type-signature"></span>new SchemaPiece(client, gateway, options, parent, key)</h4>
+    <h4 class="name" id="TaskStore"><span class="type-signature"></span>new TaskStore(client)</h4>
     
     
 </dt>
 <dd>
 
+    
+    <div class="description">
+        Constructs our TaskStore for use in Klasa
+    </div>
     
 
     
@@ -151,107 +155,7 @@
 
             
 
-            <td class="description last">The client which initialized this instance</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>gateway</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="Gateway.html">Gateway</a>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The Gateway that manages this schema instance</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>options</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">AddOptions
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The object containing the properties for this schema instance</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>parent</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="SchemaFolder.html">SchemaFolder</a>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The parent which holds this instance</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>key</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The name of the key</td>
+            <td class="description last">The Klasa client</td>
         </tr>
 
     
@@ -282,6 +186,13 @@
     
 
     
+    <dt class="implements">Implements:</dt>
+    <dd class="implements"><ul>
+        
+            <li><a href="Store.html">Store</a></li>
+        
+    </ul></dd>
+    
 
     
 
@@ -300,7 +211,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L40">lib/settings/SchemaPiece.js#L40</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/TaskStore.js#L18">lib/structures/TaskStore.js#L18</a>	</dd>
 	
 
 	
@@ -328,6 +239,16 @@
 
     
     </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="https://discord.js.org/#/docs/main/master/class/Collection">external:Collection</a></ul>
+
 
     
 
@@ -345,16 +266,16 @@
         <dl>
             
 <hr>
-<dt class="name" id="array">
+<dt class="name" id="client">
 
-    <h4 id="array"><span class="type-signature"></span>array<span class="type-signature"> :boolean</span></h4>
+    <h4 id="client"><span class="type-signature">&lt;readonly> </span>client<span class="type-signature"> :<a href="KlasaClient.html">KlasaClient</a></span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        Whether this key should store multiple or a single value.
+        The client this TaskStore was created with.
     </div>
     
 
@@ -363,7 +284,7 @@
         <ul>
             <li>
                 
-<span class="param-type">boolean
+<span class="param-type"><a href="KlasaClient.html">KlasaClient</a>
 </span>
 
 
@@ -412,7 +333,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L51">lib/settings/SchemaPiece.js#L51</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/TaskStore.js#L21">lib/structures/TaskStore.js#L21</a>	</dd>
 	
 
 	
@@ -429,16 +350,16 @@
         
             
 <hr>
-<dt class="name" id="configurable">
+<dt class="name" id="coreDir">
 
-    <h4 id="configurable"><span class="type-signature"></span>configurable<span class="type-signature"> :boolean</span></h4>
+    <h4 id="coreDir"><span class="type-signature"></span>coreDir<span class="type-signature"> :String</span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        Whether this key should be configureable by the config command. When type is any, this key defaults to false.
+        The directory of core task pieces in Klasa relative to where its installed.
     </div>
     
 
@@ -447,7 +368,7 @@
         <ul>
             <li>
                 
-<span class="param-type">boolean
+<span class="param-type">String
 </span>
 
 
@@ -496,7 +417,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L91">lib/settings/SchemaPiece.js#L91</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/TaskStore.js#L35">lib/structures/TaskStore.js#L35</a>	</dd>
 	
 
 	
@@ -513,16 +434,16 @@
         
             
 <hr>
-<dt class="name" id="default">
+<dt class="name" id="holds">
 
-    <h4 id="default"><span class="type-signature"></span>default<span class="type-signature"> :*</span></h4>
+    <h4 id="holds"><span class="type-signature"></span>holds<span class="type-signature"> :<a href="Task.html">Task</a></span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        What this key should provide by default.
+        The type of structure this store holds
     </div>
     
 
@@ -531,7 +452,7 @@
         <ul>
             <li>
                 
-<span class="param-type">*
+<span class="param-type"><a href="Task.html">Task</a>
 </span>
 
 
@@ -580,7 +501,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L59">lib/settings/SchemaPiece.js#L59</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/TaskStore.js#L49">lib/structures/TaskStore.js#L49</a>	</dd>
 	
 
 	
@@ -597,16 +518,16 @@
         
             
 <hr>
-<dt class="name" id="max">
+<dt class="name" id="name">
 
-    <h4 id="max"><span class="type-signature">&lt;nullable> </span>max<span class="type-signature"> :number</span></h4>
+    <h4 id="name"><span class="type-signature"></span>name<span class="type-signature"> :String</span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        The maximum value for this key.
+        The name of what this holds
     </div>
     
 
@@ -615,7 +536,7 @@
         <ul>
             <li>
                 
-<span class="param-type">number
+<span class="param-type">String
 </span>
 
 
@@ -664,7 +585,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L75">lib/settings/SchemaPiece.js#L75</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/TaskStore.js#L56">lib/structures/TaskStore.js#L56</a>	</dd>
 	
 
 	
@@ -681,16 +602,16 @@
         
             
 <hr>
-<dt class="name" id="min">
+<dt class="name" id="userDir">
 
-    <h4 id="min"><span class="type-signature">&lt;nullable> </span>min<span class="type-signature"> :number</span></h4>
+    <h4 id="userDir"><span class="type-signature"></span>userDir<span class="type-signature"> :String</span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        The minimum value for this key.
+        The directory of local task pieces relative to where you run Klasa from.
     </div>
     
 
@@ -699,7 +620,7 @@
         <ul>
             <li>
                 
-<span class="param-type">number
+<span class="param-type">String
 </span>
 
 
@@ -748,175 +669,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L67">lib/settings/SchemaPiece.js#L67</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="sql">
-
-    <h4 id="sql"><span class="type-signature"></span>sql<span class="type-signature"> :Array.&lt;string></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        A tuple of strings containing the path and the datatype.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Array.&lt;string>
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L83">lib/settings/SchemaPiece.js#L83</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="type">
-
-    <h4 id="type"><span class="type-signature"></span>type<span class="type-signature"> :string</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The type of this key.
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">string
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L43">lib/settings/SchemaPiece.js#L43</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/TaskStore.js#L42">lib/structures/TaskStore.js#L42</a>	</dd>
 	
 
 	
@@ -940,7 +693,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="modify"><span class="type-signature">&lt;async> </span>modify(options)</h4>
+    <h4 class="name" id="delete"><span class="type-signature"></span>delete(name)</h4>
     
     
 </dt>
@@ -948,7 +701,7 @@
 
     
     <div class="description">
-        Modify this SchemaPiece's properties.
+        Deletes a Task piece from the store
     </div>
     
 
@@ -983,13 +736,17 @@
 
         <tr>
             
-                <td class="name"><code>options</code></td>
+                <td class="name"><code>name</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">ModifyOptions
+<span class="param-type"><a href="Task.html">Task</a>
+</span>
+|
+
+<span class="param-type">string
 </span>
 
 
@@ -1001,7 +758,7 @@
 
             
 
-            <td class="description last">The new options</td>
+            <td class="description last">The Task piece instance or a string representing the structure this store caches</td>
         </tr>
 
     
@@ -1050,7 +807,128 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L152">lib/settings/SchemaPiece.js#L152</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/TaskStore.js#L65">lib/structures/TaskStore.js#L65</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    whether or not the delete was successful.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="init"><span class="type-signature"></span>init()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Initializes all pieces in this store.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+    <dt class="implements">Implements:</dt>
+    <dd class="implements"><ul>
+        
+            <li><a href="Store.html#init">Store#init</a></li>
+        
+    </ul></dd>
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/interfaces/Store.js#L22">lib/structures/interfaces/Store.js#L22</a>	</dd>
 	
 
 	
@@ -1083,7 +961,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Promise.&lt;this>
+<span class="param-type">Array
 </span>
 
 
@@ -1101,7 +979,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="parse"><span class="type-signature"></span>parse(value, guild)</h4>
+    <h4 class="name" id="load"><span class="type-signature"></span>load(dir, file)</h4>
     
     
 </dt>
@@ -1109,7 +987,7 @@
 
     
     <div class="description">
-        Parse a value in this key's resolver.
+        Loads a piece into Klasa so it can be saved in this store.
     </div>
     
 
@@ -1144,7 +1022,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>dir</code></td>
             
 
             <td class="type">
@@ -1162,20 +1040,24 @@
 
             
 
-            <td class="description last">The value to parse</td>
+            <td class="description last">The user directory or core directory where this file is saved</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>guild</code></td>
+                <td class="name"><code>file</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="KlasaGuild.html">KlasaGuild</a>
+<span class="param-type">string
+</span>
+|
+
+<span class="param-type">Array.&lt;string>
 </span>
 
 
@@ -1187,7 +1069,468 @@
 
             
 
-            <td class="description last">A Guild instance required for the resolver to work</td>
+            <td class="description last">A string or array of strings showing where the file is located.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+    <dt class="implements">Implements:</dt>
+    <dd class="implements"><ul>
+        
+            <li><a href="Store.html#load">Store#load</a></li>
+        
+    </ul></dd>
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/interfaces/Store.js#L33">lib/structures/interfaces/Store.js#L33</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Piece.html">Piece</a>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="loadAll"><span class="type-signature">&lt;async> </span>loadAll()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Loads all of our pieces from both the user and core directories.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+    <dt class="implements">Implements:</dt>
+    <dd class="implements"><ul>
+        
+            <li><a href="Store.html#loadAll">Store#loadAll</a></li>
+        
+    </ul></dd>
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/interfaces/Store.js#L52">lib/structures/interfaces/Store.js#L52</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The number of pieces loaded.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="resolve"><span class="type-signature"></span>resolve(name)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Resolve a string or piece into a piece object.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Piece.html">Piece</a>
+</span>
+|
+
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The piece object or a string representing a piece's name</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.0.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+    <dt class="implements">Implements:</dt>
+    <dd class="implements"><ul>
+        
+            <li><a href="Store.html#resolve">Store#resolve</a></li>
+        
+    </ul></dd>
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/interfaces/Store.js#L69">lib/structures/interfaces/Store.js#L69</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Piece.html">Piece</a>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="set"><span class="type-signature"></span>set(task)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Sets up a Task piece in our store.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>task</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Task.html">Task</a>
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The task piece instance we are setting up</td>
         </tr>
 
     
@@ -1236,7 +1579,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L109">lib/settings/SchemaPiece.js#L109</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/structures/TaskStore.js#L78">lib/structures/TaskStore.js#L78</a>	</dd>
 	
 
 	
@@ -1269,388 +1612,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Promise.&lt;*>
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="resolveString"><span class="type-signature"></span>resolveString(msg)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Resolve a string.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>msg</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="KlasaMessage.html">KlasaMessage</a>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The Message to use</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L119">lib/settings/SchemaPiece.js#L119</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="toJSON"><span class="type-signature"></span>toJSON()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Get this key's raw data in JSON.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L312">lib/settings/SchemaPiece.js#L312</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">SchemaPieceJSON
-</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="toString"><span class="type-signature"></span>toString()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Stringify a value or the instance itself.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
-	<dd class="tag-since">
-		<ul class="dummy">
-			<li>0.5.0</li>
-		</ul>
-	</dd>
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L329">lib/settings/SchemaPiece.js#L329</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string
+<span class="param-type"><a href="Task.html">Task</a>
 </span>
 
 
@@ -1667,556 +1629,6 @@
         </dl>
     
 
-    
-        <h3 class="subsection-title">Type Definitions</h3>
-
-        <dl>
-                
-<hr>
-<dt class="name" id=".ModifyOptions">
-
-    <h4 id=".ModifyOptions">ModifyOptions</h4>
-
-    
-</dt>
-<dd>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Object
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    <dl>
-
-<table class="props table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>default</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">*
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The new default value</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>min</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The new minimum range value</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>max</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The new maximum range value</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>configurable</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The new configurable value</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>sql</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The new sql datatype</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</dl>
-
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L22">lib/settings/SchemaPiece.js#L22</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-            
-                
-<hr>
-<dt class="name" id=".SchemaPieceJSON">
-
-    <h4 id=".SchemaPieceJSON">SchemaPieceJSON</h4>
-
-    
-</dt>
-<dd>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Object
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    <dl>
-
-<table class="props table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>type</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The type for the key</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>default</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">*
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The default value for the key</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>min</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The min value for the key (String.length for String, value for number)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>max</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The max value for the key (String.length for String, value for number)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>sql</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;string>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">A tuple containing the name of the column and its data type</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>array</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Whether the key should be stored as Array or not</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>configurable</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Whether the key should be configurable by the config command or not</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</dl>
-
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/SchemaPiece.js#L10">lib/settings/SchemaPiece.js#L10</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-            </dl>
     
 
     
