@@ -45,6 +45,13 @@
 				</ul>
 			</li>
 			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html">Global</a></li>
+				</ul>
+			</li>
+			
 		</ul>
         
             <div class="col-sm-3 col-md-3">
@@ -2457,7 +2464,7 @@
             <td class="type">
             
                 
-<span class="param-type">GatewayPathOptions
+<span class="param-type">GatewayGetPathOptions
 </span>
 
 
@@ -3098,9 +3105,9 @@
         <dl>
                 
 <hr>
-<dt class="name" id=".GatewayGuildResolvable">
+<dt class="name" id=".GatewayGetPathOptions">
 
-    <h4 id=".GatewayGuildResolvable">GatewayGuildResolvable</h4>
+    <h4 id=".GatewayGetPathOptions">GatewayGetPathOptions</h4>
 
     
 </dt>
@@ -3112,34 +3119,8 @@
         <ul>
             <li>
                 
-<span class="param-type"><a href="KlasaGuild.html">KlasaGuild</a>
+<span class="param-type">Object
 </span>
-|
-
-<span class="param-type"><a href="KlasaMessage.html">KlasaMessage</a>
-</span>
-|
-
-<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/TextChannel">external:TextChannel</a></span>
-|
-
-<span class="param-type">external:VoiceChannel
-</span>
-|
-
-<span class="param-type">external:CategoryChannel
-</span>
-|
-
-<span class="param-type">external:Member
-</span>
-|
-
-<span class="param-type">external:GuildChannel
-</span>
-|
-
-<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/Role">external:Role</a></span>
 
 
 
@@ -3149,6 +3130,117 @@
 
     
 <dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>avoidUnconfigurable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>piece</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean
+</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
     
 
 	
@@ -3181,6 +3273,158 @@
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
 		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/Gateway.js#L21">lib/settings/Gateway.js#L21</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+            
+                
+<hr>
+<dt class="name" id=".GatewayGetPathResult">
+
+    <h4 id=".GatewayGetPathResult">GatewayGetPathResult</h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Object
+</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="SchemaPiece.html">SchemaPiece</a>
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>route</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string>
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/Gateway.js#L28">lib/settings/Gateway.js#L28</a>	</dd>
 	
 
 	
@@ -3416,9 +3660,9 @@
             
                 
 <hr>
-<dt class="name" id=".GatewayPathOptions">
+<dt class="name" id=".GuildResolvable">
 
-    <h4 id=".GatewayPathOptions">GatewayPathOptions</h4>
+    <h4 id=".GuildResolvable">GuildResolvable</h4>
 
     
 </dt>
@@ -3430,8 +3674,29 @@
         <ul>
             <li>
                 
-<span class="param-type">Object
+<span class="param-type"><a href="KlasaGuild.html">KlasaGuild</a>
 </span>
+|
+
+<span class="param-type"><a href="KlasaMessage.html">KlasaMessage</a>
+</span>
+|
+
+<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/TextChannel">external:TextChannel</a></span>
+|
+
+<span class="param-type">external:VoiceChannel
+</span>
+|
+
+<span class="param-type">external:CategoryChannel
+</span>
+|
+
+<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/GuildMember">external:GuildMember</a></span>
+|
+
+<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/Role">external:Role</a></span>
 
 
 
@@ -3441,117 +3706,6 @@
 
     
 <dl class="details">
-    
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    <dl>
-
-<table class="props table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>avoidUnconfigurable</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>piece</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    true
-                
-                </td>
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</dl>
-
     
 
 	
@@ -3583,159 +3737,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/Gateway.js#L26">lib/settings/Gateway.js#L26</a>	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-            
-                
-<hr>
-<dt class="name" id=".GatewayPathResult">
-
-    <h4 id=".GatewayPathResult">GatewayPathResult</h4>
-
-    
-</dt>
-<dd>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Object
-</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    <dl>
-
-<table class="props table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>path</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="SchemaPiece.html">SchemaPiece</a>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>route</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;string>
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</dl>
-
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/Gateway.js#L33">lib/settings/Gateway.js#L33</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/settings/Gateway.js#L35">lib/settings/Gateway.js#L35</a>	</dd>
 	
 
 	
