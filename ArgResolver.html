@@ -201,7 +201,243 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="piece"><span class="type-signature">&lt;async> </span>piece(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="custom"><span class="type-signature">&lt;async> </span>custom(arg, possible, msg, custom)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Resolves a one-off custom argument
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arg</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">This arg</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>possible</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Possible.html">Possible</a>
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">This current usage possible</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>msg</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="KlasaMessage.html">KlasaMessage</a>
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The message that triggered the command</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>custom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The custom resolver</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>0.5.0</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L19">lib/parsers/ArgResolver.js#L19</a>	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;any>
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="piece"><span class="type-signature">&lt;async> </span>piece(arg, possible, msg)</h4>
     
     
 </dt>
@@ -269,38 +505,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -312,32 +523,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -411,7 +597,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L20">lib/parsers/ArgResolver.js#L20</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L37">lib/parsers/ArgResolver.js#L37</a>	</dd>
 	
 
 	
@@ -444,7 +630,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="Piece.html">Piece</a>
+<span class="param-type">Promise.&lt;<a href="Piece.html">Piece</a>>
 </span>
 
 
@@ -462,7 +648,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="store"><span class="type-signature">&lt;async> </span>store(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="store"><span class="type-signature">&lt;async> </span>store(arg, possible, msg)</h4>
     
     
 </dt>
@@ -530,38 +716,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -573,32 +734,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -672,7 +808,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L39">lib/parsers/ArgResolver.js#L39</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L53">lib/parsers/ArgResolver.js#L53</a>	</dd>
 	
 
 	
@@ -705,7 +841,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="Store.html">Store</a>
+<span class="param-type">Promise.&lt;<a href="Store.html">Store</a>>
 </span>
 
 
@@ -723,7 +859,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="command"><span class="type-signature">&lt;async> </span>command(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="command"><span class="type-signature">&lt;async> </span>command(arg, possible, msg)</h4>
     
     
 </dt>
@@ -791,38 +927,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -834,32 +945,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -933,7 +1019,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L56">lib/parsers/ArgResolver.js#L56</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L67">lib/parsers/ArgResolver.js#L67</a>	</dd>
 	
 
 	
@@ -966,7 +1052,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="Command.html">Command</a>
+<span class="param-type">Promise.&lt;<a href="Command.html">Command</a>>
 </span>
 
 
@@ -984,7 +1070,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="cmd"><span class="type-signature">&lt;async> </span>cmd(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="cmd"><span class="type-signature">&lt;async> </span>cmd(arg, possible, msg)</h4>
     
     
 </dt>
@@ -1052,38 +1138,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -1095,32 +1156,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -1194,7 +1230,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L70">lib/parsers/ArgResolver.js#L70</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L79">lib/parsers/ArgResolver.js#L79</a>	</dd>
 	
 
 	
@@ -1227,7 +1263,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="Command.html">Command</a>
+<span class="param-type">Promise.&lt;<a href="Command.html">Command</a>>
 </span>
 
 
@@ -1245,7 +1281,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="event"><span class="type-signature">&lt;async> </span>event(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="event"><span class="type-signature">&lt;async> </span>event(arg, possible, msg)</h4>
     
     
 </dt>
@@ -1313,38 +1349,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -1356,32 +1367,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -1455,7 +1441,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L87">lib/parsers/ArgResolver.js#L87</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L93">lib/parsers/ArgResolver.js#L93</a>	</dd>
 	
 
 	
@@ -1488,7 +1474,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="Event.html">Event</a>
+<span class="param-type">Promise.&lt;<a href="Event.html">Event</a>>
 </span>
 
 
@@ -1506,7 +1492,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="extendable"><span class="type-signature">&lt;async> </span>extendable(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="extendable"><span class="type-signature">&lt;async> </span>extendable(arg, possible, msg)</h4>
     
     
 </dt>
@@ -1574,38 +1560,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -1617,32 +1578,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -1716,7 +1652,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L104">lib/parsers/ArgResolver.js#L104</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L107">lib/parsers/ArgResolver.js#L107</a>	</dd>
 	
 
 	
@@ -1749,7 +1685,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="Extendable.html">Extendable</a>
+<span class="param-type">Promise.&lt;<a href="Extendable.html">Extendable</a>>
 </span>
 
 
@@ -1767,7 +1703,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="finalizer"><span class="type-signature">&lt;async> </span>finalizer(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="finalizer"><span class="type-signature">&lt;async> </span>finalizer(arg, possible, msg)</h4>
     
     
 </dt>
@@ -1835,38 +1771,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -1878,32 +1789,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -2010,7 +1896,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="Finalizer.html">Finalizer</a>
+<span class="param-type">Promise.&lt;<a href="Finalizer.html">Finalizer</a>>
 </span>
 
 
@@ -2028,7 +1914,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="inhibitor"><span class="type-signature">&lt;async> </span>inhibitor(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="inhibitor"><span class="type-signature">&lt;async> </span>inhibitor(arg, possible, msg)</h4>
     
     
 </dt>
@@ -2096,38 +1982,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -2139,32 +2000,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -2238,7 +2074,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L138">lib/parsers/ArgResolver.js#L138</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L135">lib/parsers/ArgResolver.js#L135</a>	</dd>
 	
 
 	
@@ -2271,7 +2107,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="Inhibitor.html">Inhibitor</a>
+<span class="param-type">Promise.&lt;<a href="Inhibitor.html">Inhibitor</a>>
 </span>
 
 
@@ -2289,7 +2125,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="monitor"><span class="type-signature">&lt;async> </span>monitor(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="monitor"><span class="type-signature">&lt;async> </span>monitor(arg, possible, msg)</h4>
     
     
 </dt>
@@ -2357,38 +2193,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -2400,32 +2211,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -2499,7 +2285,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L155">lib/parsers/ArgResolver.js#L155</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L149">lib/parsers/ArgResolver.js#L149</a>	</dd>
 	
 
 	
@@ -2532,7 +2318,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="Monitor.html">Monitor</a>
+<span class="param-type">Promise.&lt;<a href="Monitor.html">Monitor</a>>
 </span>
 
 
@@ -2550,7 +2336,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="language"><span class="type-signature">&lt;async> </span>language(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="language"><span class="type-signature">&lt;async> </span>language(arg, possible, msg)</h4>
     
     
 </dt>
@@ -2618,38 +2404,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -2661,32 +2422,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -2760,7 +2496,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L172">lib/parsers/ArgResolver.js#L172</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L163">lib/parsers/ArgResolver.js#L163</a>	</dd>
 	
 
 	
@@ -2793,7 +2529,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="Language.html">Language</a>
+<span class="param-type">Promise.&lt;<a href="Language.html">Language</a>>
 </span>
 
 
@@ -2811,7 +2547,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="provider"><span class="type-signature">&lt;async> </span>provider(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="provider"><span class="type-signature">&lt;async> </span>provider(arg, possible, msg)</h4>
     
     
 </dt>
@@ -2879,38 +2615,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -2922,32 +2633,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -3021,7 +2707,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L189">lib/parsers/ArgResolver.js#L189</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L177">lib/parsers/ArgResolver.js#L177</a>	</dd>
 	
 
 	
@@ -3054,7 +2740,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="Provider.html">Provider</a>
+<span class="param-type">Promise.&lt;<a href="Provider.html">Provider</a>>
 </span>
 
 
@@ -3072,7 +2758,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="task"><span class="type-signature">&lt;async> </span>task(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="task"><span class="type-signature">&lt;async> </span>task(arg, possible, msg)</h4>
     
     
 </dt>
@@ -3140,38 +2826,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -3183,32 +2844,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -3282,7 +2918,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L206">lib/parsers/ArgResolver.js#L206</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L191">lib/parsers/ArgResolver.js#L191</a>	</dd>
 	
 
 	
@@ -3315,7 +2951,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="Provider.html">Provider</a>
+<span class="param-type">Promise.&lt;<a href="Task.html">Task</a>>
 </span>
 
 
@@ -3333,7 +2969,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="message"><span class="type-signature"></span>message(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="message"><span class="type-signature"></span>message(arg, possible, msg)</h4>
     
     
 </dt>
@@ -3401,38 +3037,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -3444,32 +3055,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -3543,7 +3129,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L223">lib/parsers/ArgResolver.js#L223</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L205">lib/parsers/ArgResolver.js#L205</a>	</dd>
 	
 
 	
@@ -3576,7 +3162,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="KlasaMessage.html">KlasaMessage</a>
+<span class="param-type">Promise.&lt;<a href="KlasaMessage.html">KlasaMessage</a>>
 </span>
 
 
@@ -3594,7 +3180,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="msg"><span class="type-signature">&lt;async> </span>msg(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="msg"><span class="type-signature">&lt;async> </span>msg(arg, possible, msg)</h4>
     
     
 </dt>
@@ -3662,38 +3248,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -3705,32 +3266,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -3809,7 +3345,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L237">lib/parsers/ArgResolver.js#L237</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L217">lib/parsers/ArgResolver.js#L217</a>	</dd>
 	
 
 	
@@ -3842,7 +3378,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="KlasaMessage.html">KlasaMessage</a>
+<span class="param-type">Promise.&lt;<a href="KlasaMessage.html">KlasaMessage</a>>
 </span>
 
 
@@ -3860,7 +3396,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="mention"><span class="type-signature"></span>mention(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="mention"><span class="type-signature"></span>mention(arg, possible, msg)</h4>
     
     
 </dt>
@@ -3928,38 +3464,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -3971,32 +3482,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -4070,7 +3556,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L254">lib/parsers/ArgResolver.js#L254</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L231">lib/parsers/ArgResolver.js#L231</a>	</dd>
 	
 
 	
@@ -4103,7 +3589,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="KlasaUser.html">KlasaUser</a>
+<span class="param-type">Promise.&lt;<a href="KlasaUser.html">KlasaUser</a>>
 </span>
 
 
@@ -4121,7 +3607,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="user"><span class="type-signature">&lt;async> </span>user(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="user"><span class="type-signature">&lt;async> </span>user(arg, possible, msg)</h4>
     
     
 </dt>
@@ -4189,38 +3675,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -4232,32 +3693,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -4336,7 +3772,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L268">lib/parsers/ArgResolver.js#L268</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L243">lib/parsers/ArgResolver.js#L243</a>	</dd>
 	
 
 	
@@ -4369,7 +3805,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="KlasaUser.html">KlasaUser</a>
+<span class="param-type">Promise.&lt;<a href="KlasaUser.html">KlasaUser</a>>
 </span>
 
 
@@ -4387,7 +3823,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="member"><span class="type-signature">&lt;async> </span>member(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="member"><span class="type-signature">&lt;async> </span>member(arg, possible, msg)</h4>
     
     
 </dt>
@@ -4455,38 +3891,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -4498,32 +3909,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -4602,7 +3988,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L285">lib/parsers/ArgResolver.js#L285</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L257">lib/parsers/ArgResolver.js#L257</a>	</dd>
 	
 
 	
@@ -4635,7 +4021,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/GuildMember">external:GuildMember</a></span>
+<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/GuildMember">Promise.<external:GuildMember></a></span>
 
 
 
@@ -4652,7 +4038,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="channel"><span class="type-signature">&lt;async> </span>channel(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="channel"><span class="type-signature">&lt;async> </span>channel(arg, possible, msg)</h4>
     
     
 </dt>
@@ -4720,38 +4106,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -4763,32 +4124,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -4867,7 +4203,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L302">lib/parsers/ArgResolver.js#L302</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L271">lib/parsers/ArgResolver.js#L271</a>	</dd>
 	
 
 	
@@ -4900,7 +4236,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/Channel">external:Channel</a></span>
+<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/Channel">Promise.<external:Channel></a></span>
 
 
 
@@ -4917,7 +4253,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="emoji"><span class="type-signature">&lt;async> </span>emoji(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="emoji"><span class="type-signature">&lt;async> </span>emoji(arg, possible, msg)</h4>
     
     
 </dt>
@@ -4985,38 +4321,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -5028,32 +4339,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -5132,7 +4418,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L319">lib/parsers/ArgResolver.js#L319</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L285">lib/parsers/ArgResolver.js#L285</a>	</dd>
 	
 
 	
@@ -5165,7 +4451,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/Emoji">external:Emoji</a></span>
+<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/Emoji">Promise.<external:Emoji></a></span>
 
 
 
@@ -5182,7 +4468,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="guild"><span class="type-signature">&lt;async> </span>guild(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="guild"><span class="type-signature">&lt;async> </span>guild(arg, possible, msg)</h4>
     
     
 </dt>
@@ -5250,38 +4536,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -5293,32 +4554,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -5397,7 +4633,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L336">lib/parsers/ArgResolver.js#L336</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L299">lib/parsers/ArgResolver.js#L299</a>	</dd>
 	
 
 	
@@ -5430,7 +4666,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="KlasaGuild.html">KlasaGuild</a>
+<span class="param-type">Promise.&lt;<a href="KlasaGuild.html">KlasaGuild</a>>
 </span>
 
 
@@ -5448,7 +4684,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="role"><span class="type-signature">&lt;async> </span>role(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="role"><span class="type-signature">&lt;async> </span>role(arg, possible, msg)</h4>
     
     
 </dt>
@@ -5516,38 +4752,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -5559,32 +4770,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -5663,7 +4849,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L353">lib/parsers/ArgResolver.js#L353</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L313">lib/parsers/ArgResolver.js#L313</a>	</dd>
 	
 
 	
@@ -5696,7 +4882,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/Role">external:Role</a></span>
+<span class="param-type"><a href="https://discord.js.org/#/docs/main/master/class/Role">Promise.<external:Role></a></span>
 
 
 
@@ -5713,7 +4899,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="literal"><span class="type-signature">&lt;async> </span>literal(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="literal"><span class="type-signature">&lt;async> </span>literal(arg, possible, msg)</h4>
     
     
 </dt>
@@ -5781,38 +4967,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -5824,32 +4985,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -5923,7 +5059,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L370">lib/parsers/ArgResolver.js#L370</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L327">lib/parsers/ArgResolver.js#L327</a>	</dd>
 	
 
 	
@@ -5956,7 +5092,7 @@
     </dt>
     <dd>
         
-<span class="param-type">string
+<span class="param-type">Promise.&lt;string>
 </span>
 
 
@@ -5974,7 +5110,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="boolean"><span class="type-signature"></span>boolean(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="boolean"><span class="type-signature"></span>boolean(arg, possible, msg)</h4>
     
     
 </dt>
@@ -6042,38 +5178,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -6085,32 +5196,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -6189,7 +5275,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L386">lib/parsers/ArgResolver.js#L386</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L341">lib/parsers/ArgResolver.js#L341</a>	</dd>
 	
 
 	
@@ -6222,7 +5308,7 @@
     </dt>
     <dd>
         
-<span class="param-type">boolean
+<span class="param-type">Promise.&lt;boolean>
 </span>
 
 
@@ -6240,7 +5326,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="bool"><span class="type-signature">&lt;async> </span>bool(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="bool"><span class="type-signature">&lt;async> </span>bool(arg, possible, msg)</h4>
     
     
 </dt>
@@ -6308,38 +5394,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -6351,32 +5412,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -6450,7 +5486,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L400">lib/parsers/ArgResolver.js#L400</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L353">lib/parsers/ArgResolver.js#L353</a>	</dd>
 	
 
 	
@@ -6483,7 +5519,7 @@
     </dt>
     <dd>
         
-<span class="param-type">boolean
+<span class="param-type">Promise.&lt;boolean>
 </span>
 
 
@@ -6501,7 +5537,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="string"><span class="type-signature"></span>string(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="string"><span class="type-signature"></span>string(arg, possible, msg)</h4>
     
     
 </dt>
@@ -6569,38 +5605,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -6612,32 +5623,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -6716,7 +5702,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L417">lib/parsers/ArgResolver.js#L417</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L367">lib/parsers/ArgResolver.js#L367</a>	</dd>
 	
 
 	
@@ -6749,7 +5735,7 @@
     </dt>
     <dd>
         
-<span class="param-type">string
+<span class="param-type">Promise.&lt;string>
 </span>
 
 
@@ -6767,7 +5753,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="str"><span class="type-signature">&lt;async> </span>str(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="str"><span class="type-signature">&lt;async> </span>str(arg, possible, msg)</h4>
     
     
 </dt>
@@ -6835,38 +5821,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -6878,32 +5839,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -6977,7 +5913,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L431">lib/parsers/ArgResolver.js#L431</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L379">lib/parsers/ArgResolver.js#L379</a>	</dd>
 	
 
 	
@@ -7010,7 +5946,7 @@
     </dt>
     <dd>
         
-<span class="param-type">string
+<span class="param-type">Promise.&lt;string>
 </span>
 
 
@@ -7028,7 +5964,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="integer"><span class="type-signature"></span>integer(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="integer"><span class="type-signature"></span>integer(arg, possible, msg)</h4>
     
     
 </dt>
@@ -7096,38 +6032,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -7139,32 +6050,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -7243,7 +6129,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L447">lib/parsers/ArgResolver.js#L447</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L393">lib/parsers/ArgResolver.js#L393</a>	</dd>
 	
 
 	
@@ -7276,7 +6162,7 @@
     </dt>
     <dd>
         
-<span class="param-type">number
+<span class="param-type">Promise.&lt;number>
 </span>
 
 
@@ -7294,7 +6180,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="int"><span class="type-signature">&lt;async> </span>int(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="int"><span class="type-signature">&lt;async> </span>int(arg, possible, msg)</h4>
     
     
 </dt>
@@ -7362,38 +6248,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -7405,32 +6266,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -7504,7 +6340,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L461">lib/parsers/ArgResolver.js#L461</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L405">lib/parsers/ArgResolver.js#L405</a>	</dd>
 	
 
 	
@@ -7537,7 +6373,7 @@
     </dt>
     <dd>
         
-<span class="param-type">number
+<span class="param-type">Promise.&lt;number>
 </span>
 
 
@@ -7555,7 +6391,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="num"><span class="type-signature"></span>num(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="num"><span class="type-signature"></span>num(arg, possible, msg)</h4>
     
     
 </dt>
@@ -7623,38 +6459,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -7666,32 +6477,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -7765,7 +6551,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L482">lib/parsers/ArgResolver.js#L482</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L423">lib/parsers/ArgResolver.js#L423</a>	</dd>
 	
 
 	
@@ -7798,7 +6584,7 @@
     </dt>
     <dd>
         
-<span class="param-type">number
+<span class="param-type">Promise.&lt;number>
 </span>
 
 
@@ -7816,7 +6602,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="number"><span class="type-signature"></span>number(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="number"><span class="type-signature"></span>number(arg, possible, msg)</h4>
     
     
 </dt>
@@ -7884,38 +6670,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -7927,32 +6688,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -8026,7 +6762,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L496">lib/parsers/ArgResolver.js#L496</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L435">lib/parsers/ArgResolver.js#L435</a>	</dd>
 	
 
 	
@@ -8059,7 +6795,7 @@
     </dt>
     <dd>
         
-<span class="param-type">number
+<span class="param-type">Promise.&lt;number>
 </span>
 
 
@@ -8077,7 +6813,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="float"><span class="type-signature">&lt;async> </span>float(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="float"><span class="type-signature">&lt;async> </span>float(arg, possible, msg)</h4>
     
     
 </dt>
@@ -8145,38 +6881,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -8188,32 +6899,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -8292,7 +6978,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L510">lib/parsers/ArgResolver.js#L510</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L447">lib/parsers/ArgResolver.js#L447</a>	</dd>
 	
 
 	
@@ -8325,7 +7011,7 @@
     </dt>
     <dd>
         
-<span class="param-type">number
+<span class="param-type">Promise.&lt;number>
 </span>
 
 
@@ -8343,7 +7029,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="reg"><span class="type-signature">&lt;async> </span>reg(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="reg"><span class="type-signature">&lt;async> </span>reg(arg, possible, msg)</h4>
     
     
 </dt>
@@ -8411,38 +7097,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -8454,32 +7115,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -8553,7 +7189,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L531">lib/parsers/ArgResolver.js#L531</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L465">lib/parsers/ArgResolver.js#L465</a>	</dd>
 	
 
 	
@@ -8586,7 +7222,7 @@
     </dt>
     <dd>
         
-<span class="param-type">string
+<span class="param-type">Promise.&lt;RegExpExecArray>
 </span>
 
 
@@ -8604,7 +7240,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="regex"><span class="type-signature"></span>regex(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="regex"><span class="type-signature"></span>regex(arg, possible, msg)</h4>
     
     
 </dt>
@@ -8672,38 +7308,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -8715,32 +7326,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -8814,7 +7400,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L548">lib/parsers/ArgResolver.js#L548</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L479">lib/parsers/ArgResolver.js#L479</a>	</dd>
 	
 
 	
@@ -8847,7 +7433,7 @@
     </dt>
     <dd>
         
-<span class="param-type">string
+<span class="param-type">Promise.&lt;RegExpExecArray>
 </span>
 
 
@@ -8865,7 +7451,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="regexp"><span class="type-signature"></span>regexp(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="regexp"><span class="type-signature"></span>regexp(arg, possible, msg)</h4>
     
     
 </dt>
@@ -8933,38 +7519,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -8976,32 +7537,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -9075,7 +7611,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L562">lib/parsers/ArgResolver.js#L562</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L491">lib/parsers/ArgResolver.js#L491</a>	</dd>
 	
 
 	
@@ -9108,7 +7644,7 @@
     </dt>
     <dd>
         
-<span class="param-type">string
+<span class="param-type">Promise.&lt;RegExpExecArray>
 </span>
 
 
@@ -9126,7 +7662,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="url"><span class="type-signature">&lt;async> </span>url(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="url"><span class="type-signature">&lt;async> </span>url(arg, possible, msg)</h4>
     
     
 </dt>
@@ -9194,38 +7730,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -9237,32 +7748,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -9341,7 +7827,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L576">lib/parsers/ArgResolver.js#L576</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L503">lib/parsers/ArgResolver.js#L503</a>	</dd>
 	
 
 	
@@ -9374,7 +7860,7 @@
     </dt>
     <dd>
         
-<span class="param-type">string
+<span class="param-type">Promise.&lt;string>
 </span>
 
 
@@ -9392,7 +7878,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="date"><span class="type-signature">&lt;async> </span>date(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="date"><span class="type-signature">&lt;async> </span>date(arg, possible, msg)</h4>
     
     
 </dt>
@@ -9460,38 +7946,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -9503,32 +7964,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -9602,7 +8038,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L593">lib/parsers/ArgResolver.js#L593</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L517">lib/parsers/ArgResolver.js#L517</a>	</dd>
 	
 
 	
@@ -9635,7 +8071,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Date
+<span class="param-type">Promise.&lt;Date>
 </span>
 
 
@@ -9653,7 +8089,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="duration"><span class="type-signature">&lt;async> </span>duration(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="duration"><span class="type-signature">&lt;async> </span>duration(arg, possible, msg)</h4>
     
     
 </dt>
@@ -9721,38 +8157,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -9764,32 +8175,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -9863,7 +8249,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L610">lib/parsers/ArgResolver.js#L610</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L531">lib/parsers/ArgResolver.js#L531</a>	</dd>
 	
 
 	
@@ -9896,7 +8282,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Date
+<span class="param-type">Promise.&lt;Date>
 </span>
 
 
@@ -9914,7 +8300,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="time"><span class="type-signature">&lt;async> </span>time(arg, currentUsage, possible, repeat, msg)</h4>
+    <h4 class="name" id="time"><span class="type-signature">&lt;async> </span>time(arg, possible, msg)</h4>
     
     
 </dt>
@@ -9982,38 +8368,13 @@
 
         <tr>
             
-                <td class="name"><code>currentUsage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This current usage</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>possible</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number
+<span class="param-type"><a href="Possible.html">Possible</a>
 </span>
 
 
@@ -10025,32 +8386,7 @@
 
             
 
-            <td class="description last">This possible usage id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>repeat</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean
-</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">If it is a looping/repeating arg</td>
+            <td class="description last">This current usage possible</td>
         </tr>
 
     
@@ -10124,7 +8460,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L627">lib/parsers/ArgResolver.js#L627</a>	</dd>
+		<a href="https://github.com/dirigeants/klasa/blob/master/src/lib/parsers/ArgResolver.js#L545">lib/parsers/ArgResolver.js#L545</a>	</dd>
 	
 
 	
@@ -10157,7 +8493,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Date
+<span class="param-type">Promise.&lt;Date>
 </span>
 
 
